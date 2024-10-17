@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'Poppins': ['Poppins', 'sans-serif'],
+      'Afacad-flux': ['Afacad Flux', 'sans-serif'],
     },
     extend: {
       colors: {
@@ -12,7 +13,11 @@ module.exports = {
         'primary': 'var(--primary)',
         'secondary': 'var(--secondary)',
         'accent': 'var(--accent)',
-       },       
+       },
+       backgroundImage: {
+        'background-dark': "url('/img/Background-dark.png')",
+        'background-light': "url('/img/Background-light.png')",
+      },       
     },
   },
   plugins: [],
