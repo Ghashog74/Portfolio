@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ["./*.{html,js}"],
   theme: {
     fontFamily: {
@@ -15,8 +16,8 @@ module.exports = {
         'accent': 'var(--accent)',
        },
        backgroundImage: {
-        'background-dark': "url('/img/Background-dark.png')",
-        'background-light': "url('/img/Background-light.png')",
+        'background-noise': "url('/img/nnnoise.svg')",
+
       },       
     },
   },

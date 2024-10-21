@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Portfolio</title>
   </head>
-  <body class=" bg-repeat-y bg-top bg-background font-Poppins text-text bg-background-light">
+  <body class=" bg-repeat-y bg-top bg-background font-Poppins text-text bg-background-noise bg-contain">
 
     <div class="fixed bottom-4 left-4">
       <span class="sm:hidden">XS</span>
@@ -22,13 +22,13 @@
     </div>
 
     <!-- Début navbar -->
-    <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-50 backdrop-blur-md bg-opacity-50 border border-white/20">
+    <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-50 backdrop-blur-sm bg-opacity-50 border border-white/20">
       <div class="flex items-center justify-center lg:w-1/6 max-lg:mx-1">
         <h1 class="text-4xl font-thin font-Afacad-flux">Quentin</h1>
       </div>
-      <div class="flex items-center justify-center mx-3 lg:hidden lh:w-0">
+      <div class="flex items-center justify-center mx-3 lg:hidden lg:w-0">
         <button>
-          <i class="fa-solid fa-bars text-3xl"></i>
+          <i class="fa-solid fa-bars text-3xl lg:hidden"></i>
         </button>
       </div>
       <div class="lg:w-1/2 max-lg:hidden max-lg:w-0"></div>
@@ -40,18 +40,24 @@
           <a href="#competences">Compétences</a>
         </div>
         <div class="">
-          <a href="#parcours">Parcours</a>
+          <a href="#parcours">Parcours</a> 
         </div>
         <div class="">
-          <a href="">Expériences</a>
+          <a href="#experience">Expériences</a>
         </div>
         <div class="">
-          <a href="">Contact</a>
+          <a href="#projets">Projets</a>
         </div>
         <div class="">
-          <button>
-            <i class="fa-regular fa-moon text-2xl"></i>
-          </button>
+          <a href="/contact.html">Contact</a>
+        </div class=" flex justify-center it">
+        <input type="checkbox" id="light-switch" class="light-switch sr-only" />
+        <label class="relative cursor-pointer p-2" for="light-switch">
+          <!-- <i class="fa-regular fa-moon text-xl dark:hidden"></i>
+          <i class="fa-regular fa-sun text-xl hidden dark:block"></i> -->
+          <img src="icons/moon.svg" class="h-7 dark:hidden">
+          <img src="icons/sun.svg" class="h-7 hidden dark:block">
+        </label>
         </div>
       </div>
     </nav>
@@ -59,17 +65,17 @@
      
     <!-- Début section info -->
     <section id="info" class="flex justify-center items-center w-full h-dvh">
-      <div class="my-12 flex flex-col items-center lg:flex-row lg:justify-center gap-4 mx-5 max-w-5xl bg-opacity-50 backdrop-blur-md rounded-lg border border-white/20 shadow-lg p-2">
+      <div class="my-12 flex flex-col items-center lg:flex-row lg:justify-center gap-4 mx-5 max-w-5xl p-2 rounded-lg backdrop-blur-sm bg-opacity-50 border border-white/20 shadow-lg">
           <div class="">
             <img src="img/me.png" alt="" class="h-96 w-auto">
           </div>
           <div class="flex flex-col gap-10 justify-around px-2 lg:w-1/2">
             <div class="">
-              <h2 class="text-5xl max-lg:text-center">Développeur Web</h2>
+              <h2 id="scramble" class="text-5xl max-lg:text-center">Développeur Web</h2>
             </div>
             <div class="flex flex-col gap-4 max-lg:items-center m-3">
               <p class="max-lg:text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatibus animi cupiditate nesciunt repudiandae autem, natus voluptas, voluptate earum impedit aliquam deserunt? Quia blanditiis aut voluptatibus consequatur commodi, possimus illo?</p>
-                <button class="bg-primary w-32 h-16 rounded-xl text-background">Mon cv</button>
+                <button class="bg-primary w-32 h-16 rounded-lg text-background">Mon cv</button>
             </div>
           </div>
       </div>
@@ -77,31 +83,92 @@
     <!-- Fin section info -->
 
     <!-- Début section compétences -->
-    <section id="competences" class="h-dvh">
-
+    <section id="competences" class="h-dvh flex justify-center items-center">
+      <div class="lg:w-3/5 max-lg:w-5/6 h-3/5 flex gap-10 flex flex-col items-center">
+        <div class="w-full h-full bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg flex items-center p-6 flex-col max-lg:max-w-96">
+          <div class=" w-full h-full grid lg:grid-cols-5 lg:grid-rows-3 max-lg:grid-cols-3 max-lg:grid-rows-5 gap-3 p-3 competence-grid">
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/html.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/css.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/js.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/Php_light.svg" class="dark:hidden">
+              <img src="icons/Php_dark.svg" class="hidden dark:block">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/cakephp.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/tailwind.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/mariadb.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/python.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/c++.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/Github_light.svg" class="dark:hidden">
+              <img src="icons/Github_dark.svg" class="hidden dark:block">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/vscode.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/docker.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/linux.svg" class="">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/server-light.svg" class="dark:hidden">
+              <img src="icons/server-dark.svg" class="hidden dark:block">
+            </div>
+            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/network-light.svg" class="dark:hidden">
+              <img src="icons/network-dark.svg" class="hidden dark:block">
+            </div>
+        </div>
+      </div>
     </section>
     <!-- Fin section compétences -->
 
     <!-- Début section Parcours -->
     <section id="parcours" class="h-dvh flex items-center justify-center">
       <div class="w-full h-full m-5 flex flex-col justify-evenly items-center text-center lg:w-1/2">
-        <div class="p-10 bg-opacity-50 backdrop-blur-md rounded-lg border border-white/20 shadow-lg lg:w-full ">
-          <h2>BAC PROFESSIONNEL SN-RISC</h2>
-          <br>
-          <p>2021-2024</p>
-          <br>
-          <p>LP St-Vincent / Collonges-sous-Salève Optention avec mention Très bien</p>
-        </div>
-        <div class="p-10 rounded-lg bg-opacity-50 backdrop-blur-md rounded-lg border border-white/20 shadow-lg lg:w-full">
+        <div class="gap-3 flex items-center flex-col p-10 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg lg:w-full">
+          <div>
+            <img src="icons/G4.png" class="h-20">
+          </div>
           <h2>BACHELOR CONCEPTEUR DÉVELOPPEUR D’APPLICATION</h2>
-          <br>
           <p>2024-2027</p>
-          <br>
           <p>Institut G4 / Lyon</p>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-10 bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg lg:w-full ">
+          <div>
+            <img src="icons/st-vincent.png" class="h-20">
+          </div>
+          <h2>BAC PROFESSIONNEL SN-RISC</h2>
+          <p>2021-2024</p>
+          <p>LP St-Vincent / Collonges-sous-Salève Optention avec mention Très bien</p>
         </div>
       </div>
     </section>
     <!-- Fin section Parcours -->
+    
+    
+    <script src="scripts/switch.js"></script>
   </body>
   <script src="scripts/activeNav.js"></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrambleTextPlugin3.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/GSDevTools3.min.js'></script><script  src="./scripts/scramble.js"></script> 
 </html>

@@ -17,13 +17,6 @@
       --secondary: #1c8764;
       --accent: #31e3a7;
     }
-    .light {
-      --text: #181b1a;
-      --background: #eff5f4;
-      --primary: #0b7f56;
-      --secondary: #78e3bf;
-      --accent: #1cce93;
-    }
   }
 
 .active {
@@ -33,4 +26,16 @@
   padding: 5px 10px 5px 10px;
   border-radius: 50px;
 }
-  
+
+.orange {
+  color:#ff8709;
+  background: none;
+}
+
+.demo {
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: left;
+  height: 100vh;
+
+}
