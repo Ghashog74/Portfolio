@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/styles/output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
     <title>Portfolio</title>
   </head>
-  <body class=" bg-repeat-y bg-top bg-background font-Poppins text-text bg-background-noise bg-contain">
+  <body class=" bg-repeat-y bg-top font-Poppins bg-background bg-background-noise text-text bg-background-beams-with-collision bg-contain overflow-x-hidden">
 
     <div class="fixed bottom-4 left-4">
       <span class="sm:hidden">XS</span>
@@ -20,7 +19,6 @@
       <span class="hidden xl:block 2xl:hidden">XL</span>
       <span class="hidden 2xl:block 3xl:hidden">2XL</span>
     </div>
-
     <!-- Début navbar -->
     <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-50 backdrop-blur-sm bg-opacity-50 border border-white/20">
       <div class="flex items-center justify-center lg:w-1/6 max-lg:mx-1">
@@ -28,7 +26,11 @@
       </div>
       <div class="flex items-center justify-center mx-3 lg:hidden lg:w-0">
         <button>
-          <i class="fa-solid fa-bars text-3xl lg:hidden"></i>
+          <div class="tham tham-e-squeeze tham-w-6">
+            <div class="tham-box">
+              <div class="tham-inner"></div>
+            </div>
+          </div>
         </button>
       </div>
       <div class="lg:w-1/2 max-lg:hidden max-lg:w-0"></div>
@@ -53,8 +55,6 @@
         </div class=" flex justify-center it">
         <input type="checkbox" id="light-switch" class="light-switch sr-only" />
         <label class="relative cursor-pointer p-2" for="light-switch">
-          <!-- <i class="fa-regular fa-moon text-xl dark:hidden"></i>
-          <i class="fa-regular fa-sun text-xl hidden dark:block"></i> -->
           <img src="icons/moon.svg" class="h-7 dark:hidden">
           <img src="icons/sun.svg" class="h-7 hidden dark:block">
         </label>
@@ -85,57 +85,58 @@
     <!-- Début section compétences -->
     <section id="competences" class="h-dvh flex justify-center items-center">
       <div class="lg:w-3/5 max-lg:w-5/6 h-3/5 flex gap-10 flex flex-col items-center">
-        <div class="w-full h-full bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg flex items-center p-6 flex-col max-lg:max-w-96">
-          <div class=" w-full h-full grid lg:grid-cols-5 lg:grid-rows-3 max-lg:grid-cols-3 max-lg:grid-rows-5 gap-3 p-3 competence-grid">
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/html.svg" class="">
+        <div class="w-full h-full bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg flex items-center p-6 flex-col max-lg:max-w-96 lg:max-w-4xl">
+          <div id="grid" class=" w-full h-full grid lg:grid-cols-5 lg:grid-rows-3 max-lg:grid-cols-3 max-lg:grid-rows-5 gap-3 p-3 competence-grid" id>
+            <div id="grid-item1" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/html.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/css.svg" class="">
+            <div id="grid-item2" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/css.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/js.svg" class="">
+            <div id="grid-item3" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/js.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/Php_light.svg" class="dark:hidden">
-              <img src="icons/Php_dark.svg" class="hidden dark:block">
+            <div id="grid-item4" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/Php_light.svg" class="dark:hidden max-h-28">
+              <img src="icons/Php_dark.svg" class="hidden dark:block max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/cakephp.svg" class="">
+            <div id="grid-item5" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/cakephp.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/tailwind.svg" class="">
+            <div id="grid-item6" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/tailwind.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/mariadb.svg" class="">
+            <div id="grid-item7" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/mariadb.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/python.svg" class="">
+            <div id="grid-item8" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/python.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/c++.svg" class="">
+            <div id="grid-item9" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/cpp.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/Github_light.svg" class="dark:hidden">
-              <img src="icons/Github_dark.svg" class="hidden dark:block">
+            <div id="grid-item10" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/Github_light.svg" class="dark:hidden max-h-28">
+              <img src="icons/Github_dark.svg" class="hidden dark:block max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/vscode.svg" class="">
+            <div id="grid-item11" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/vscode.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/docker.svg" class="">
+            <div id="grid-item12" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/docker.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/linux.svg" class="">
+            <div id="grid-item13" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/linux.svg" class="max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/server-light.svg" class="dark:hidden">
-              <img src="icons/server-dark.svg" class="hidden dark:block">
+            <div id="grid-item14" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/server-light.svg" class="dark:hidden max-h-28">
+              <img src="icons/server-dark.svg" class="hidden dark:block max-h-28">
             </div>
-            <div class="bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/network-light.svg" class="dark:hidden">
-              <img src="icons/network-dark.svg" class="hidden dark:block">
+            <div id="grid-item15" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+              <img src="icons/network-light.svg" class="dark:hidden max-h-28">
+              <img src="icons/network-dark.svg" class="hidden dark:block max-h-28">
             </div>
+            <div id="grid-item16"></div>
         </div>
       </div>
     </section>
@@ -151,6 +152,20 @@
           <h2>BACHELOR CONCEPTEUR DÉVELOPPEUR D’APPLICATION</h2>
           <p>2024-2027</p>
           <p>Institut G4 / Lyon</p>
+          <div class="flex flex-row gap-2 flex-wrap justify-center">
+            <img src="icons/network-light.svg" alt="" class="dark:hidden h-10">
+            <img src="icons/network-dark.svg" alt="" class="dark:block hidden h-10">
+            <img src="icons/vscode.svg" alt="" class="h-10">
+            <img src="icons/Php_light.svg" alt="" class="h-10 dark:hidden">
+            <img src="icons/Php_dark.svg" alt="" class="h-10 hidden dark:block">
+            <img src="icons/linux.svg" alt="" class="h-10">
+            <img src="icons/github_light.svg" alt="" class="dark:hidden h-10">
+            <img src="icons/Github_dark.svg" alt="" class="dark:block hidden h-10">
+            <img src="icons/html.svg" alt="" class="h-10">
+            <img src="icons/css.svg" alt="" class="h-10">
+            <img src="icons/js.svg" alt="" class="h-10">
+            <img src="icons/tailwind.svg" alt="" class="h-10">
+          </div>
         </div>
         <div class="flex flex-col items-center gap-3 p-10 bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg lg:w-full ">
           <div>
@@ -159,16 +174,51 @@
           <h2>BAC PROFESSIONNEL SN-RISC</h2>
           <p>2021-2024</p>
           <p>LP St-Vincent / Collonges-sous-Salève Optention avec mention Très bien</p>
+          <div class="flex flex-row gap-2 flex-wrap justify-center">
+            <img src="icons/cpp.svg" alt="" class="h-10">
+            <img src="icons/python.svg" alt="" class="h-10">
+            <img src="icons/network-light.svg" alt="" class="dark:hidden h-10">
+            <img src="icons/network-dark.svg" alt="" class="dark:block hidden h-10">
+            <img src="icons/server-light.svg" alt="" class="dark:hidden h-10">
+            <img src="icons/server-dark.svg" alt="" class="dark:block hidden h-10">
+            <img src="icons/linux.svg" alt="" class="h-10">
+            <img src="icons/html.svg" alt="" class="h-10">
+          </div>
         </div>
       </div>
     </section>
     <!-- Fin section Parcours -->
     
-    
+    <!-- Début section Expériences -->
+    <section id="hscroll" class="flex">
+      <div id="c1" class="content">
+        <p>1</p>
+      </div>
+      <div id="c2" class="content">
+        <p>2</p>
+      </div>
+      <div id="c3" class="content">
+        <p>3</p>
+      </div>
+      <div id="c4" class="content">
+        <p>4</p>
+      </div>
+    </section>
+    <section class="h-dvh w-dvwx">
+
+    </section>
+    <!-- Fin section Expériences -->
+    <script>
+      const tham = document.querySelector(".tham");
+        
+      tham.addEventListener('click', () => {
+        tham.classList.toggle('tham-active');
+      });
+      </script>
     <script src="scripts/switch.js"></script>
   </body>
+  <script type="module" src="scripts/animScroll.js"></script>
+  <script type="module" src="scripts/animGrid.js"></script>
   <script src="scripts/activeNav.js"></script>
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrambleTextPlugin3.min.js'></script>
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/GSDevTools3.min.js'></script><script  src="./scripts/scramble.js"></script> 
+  <script type="module" src="scripts/scramble.js"></script> 
 </html>

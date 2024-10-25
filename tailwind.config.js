@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  plugins: [
+    require('tailwind-hamburgers'),
+  ],
   darkMode: 'class',
   content: ["./*.{html,js}"],
   theme: {
@@ -14,6 +17,7 @@ module.exports = {
         'primary': 'var(--primary)',
         'secondary': 'var(--secondary)',
         'accent': 'var(--accent)',
+        'linkedin': 'var(--linkedin)',
        },
        backgroundImage: {
         'background-noise': "url('/img/nnnoise.svg')",
