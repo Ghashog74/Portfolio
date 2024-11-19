@@ -8,6 +8,7 @@ const contents = gsap.utils.toArray("#hscroll .content")
 
 gsap.to(contents, {
     xPercent: -100 * 3,
+    ease: 'none',
     scrollTrigger: {
         trigger: "#hscroll",
         pin: true,

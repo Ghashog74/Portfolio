@@ -42,28 +42,12 @@
 
 }
 
-#hscroll .content {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+.conteneur-scroll-horizontal {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  will-change: transform;
 }
 
-#c1 {
-  background-color: blue;
+.min-h-custom {
+  min-height: 1100px;
 }
-
-#c2 {
-  background-color: green;
-}
-
-#c3 {
-  background-color: yellow;
-}
-
-#c4 {
-  background-color: red;
-}
-
