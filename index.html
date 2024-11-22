@@ -48,9 +48,6 @@
           <a href="#hscroll">Expériences</a>
         </div>
         <div class="">
-          <a href="#projets">Projets</a>
-        </div>
-        <div class="">
           <a href="/contact.html">Contact</a>
         </div class=" flex justify-center it">
         <input type="checkbox" id="light-switch" class="light-switch sr-only" />
@@ -60,6 +57,11 @@
         </label>
         </div>
       </div>
+      <div class="flex justify-center items-center lg:hidden cursor-pointer" onclick="toggleMenu()">
+        <img src="icons/Burger Light.svg" class=" h-16 w-16 dark:hidden">
+        <img src="icons/Burger Dark.svg" class=" h-16 w-16 hidden dark:block">
+      </div>
+    </div>
     </nav>
     <!-- Fin navbar -->
      
@@ -506,20 +508,6 @@
     
     <!-- Fin section Expériences mobile -->
 
-    <section id="projets" class="h-dvh min-h-fit w-dvw">
-      <div class="w-full h-full flex flex-col justify-center items-center gap-10">
-        <div class="px-5 py-3 bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <p class="text-4xl font-bold">Projets</p>
-        </div>
-        <div class="project-small project">
-          qdlqsdlkqjskdh
-        </div>
-        <div class="project-container absolute border border-white">
-
-        </div>
-      </div>
-    </section>
-
     <script>
       const tham = document.querySelector(".tham");
         
@@ -533,4 +521,5 @@
   <script type="module" src="scripts/animGrid.js"></script>
   <script src="scripts/activeNav.js"></script>
   <script type="module" src="scripts/animProject.js"></script>
+  <script src="scripts/toggleMenu.js"></script>
 </html>

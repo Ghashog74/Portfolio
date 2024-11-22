@@ -63,41 +63,88 @@
         </nav>
         <!-- Fin navbar -->
 
-        <section class="h-dvh w-full flex items-center justify-center">
-            <div class="max-lg:w-5/6 lg:w-lg max-lg:max-w-96 flex justify-start items-center p-5 flex-col gap-10 rounded-lg backdrop-blur-sm bg-opacity-50 border border-white/20 shadow-lg">
-                <h1 class="text-2xl font-bold">Contacter moi !</h1>
-                <div class="flex flex-col gap-5 w-full">
-                    <form action="" method="post" class="w-full">
-                        <div class="flex flex-col justify-start items-center gap-20 p-3">
-                            <div class="flex lg:flex-row max-lg:flex-col justify-center gap-5 w-full">
-                                    <input type="text" name="firstname" id="firstname" placeholder="Nom" class="p-1 rounded-md dark:text-black border border-text w-full">
-                                    <input type="text" name="name" id="name" placeholder="Prénom" class="p-1 rounded-md dark:text-black border border-text w-full">
-                            </div>
-                            <div class="w-full">
-                                <input type="email" name="email" id="email" placeholder="Email" class="p-1 rounded-md dark:text-black w-full border border-text">
-                            </div>
-                            <div class="w-full">
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="p-1 rounded-md dark:text-black w-full resize-none border border-text"></textarea>
-                            </div>
+        <div class=" flex flex-col justify-center items-center max-2xl:mt-20 h-dvh text-text z-40">
+            <!-- Titre "Nous contacter" -->
+            <div class="flex justify-center pb-10">
+                <div class="flex justify-center bg-opacity-50 backdrop-blur-lg shadow-md rounded-xl px-10 py-3">
+                    <h2 class="text-text font-poppins text-3xl">Nous contacter</h2>
+                </div>
+            </div>
+        
+            <!-- Début du formulaire de contact -->
+            <div class="shadow-md bg-opacity-50 backdrop-blur-lg rounded-xl w-3/4 md:w-1/2 lg:w-1/3 p-8">
+                <!-- Nom -->
+                <div class="flex flex-col gap-3">
+                    <p class="ml-1 font-poppins">
+                        Nom*
+                    </p>
+                    <input class="bg-background rounded-lg shadow-md bg-opacity-50 backdrop-blur-lg h-8 p-2 outline-none"
+                        type="text" id="nom" name="nom" placeholder="Saisissez votre nom" required />
+                    <p id="name_error" class="text-red-500"></p>
+                </div>
+        
+                <!-- Email -->
+                <div class="flex flex-col gap-3">
+                    <div class="">
+                        <div class="ml-1 mt-5 font-poppins  w-fit">
+                            <p>
+                                E-mail*
+                            </p>
                         </div>
-                    </form>
-                    <div class="flex justify-center items-center gap-5">
-                        <button id="send" onclick="sendMail()" class="px-5 py-2 rounded-full text-background bg-text">Envoyer</button>
                     </div>
-                    <div class="flex justify-center gap-5">
-                        <a href="https://www.linkedin.com/in/quentinmontreuil06" target="_blank">
-                            <img src="icons/linkedin.svg" alt="" class="h-10 text-red-500 fill-current">
-                        </a>
-                        <a href="https://github.com/Ghashog74" target="_blank">
-                            <img src="icons/Github_light.svg" alt="" class="h-10 dark:hidden">
-                            <img src="icons/Github_dark.svg" alt="" class="h-10 hidden dark:block">
-                        </a>
+                    <input
+                        class="bg-background rounded-lg shadow-md bg-opacity-50 backdrop-blur-lg h-8 w-full mr-5 p-2 outline-none"
+                        type="email" id="email" name="email" placeholder="Saisissez votre mail" required />
+                    <p id="email_error" class="text-red-500"></p>
+                </div>
+        
+                <!-- Objets -->
+                <div class="flex flex-col gap-3">
+                    <div class="">
+                        <div class="ml-1 mt-5 font-poppins  w-fit">
+                            <p>
+                                Objet*
+                            </p>
+                        </div>
+                    </div>
+                    <input
+                        class="bg-background rounded-lg shadow-md bg-opacity-50 backdrop-blur-lg h-8 w-full mr-5 p-2 outline-none"
+                        type="text" id="objet" name="objet" placeholder="Saisissez votre objet" required />
+                    <p id="object_error" class="text-red-500"></p>
+                </div>
+        
+                <!-- Message -->
+                <div class="flex flex-col gap-3">
+                    <div class="">
+                        <div class="ml-1 mt-5 font-poppins w-fit">
+                            <p>
+                                Message*
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="">
+                        <textarea id="message" name="message" required rows="5" cols="68"
+                            class="stroke-2 bg-background rounded-lg shadow-md bg-opacity-50 backdrop-blur-lg p-2 outline-none w-full resize-none"
+                            placeholder="Saisissez votre message"></textarea><br>
+                        <p id="message_error" class="text-red-500"></p>
                     </div>
                 </div>
             </div>
-        </section>
+        
+            <!-- Bouton envoyer -->
+            <div class="flex justify-center mt-7">
+                <div class="flex justify-center bg-secondary rounded-lg text-text w-fit h-fit hover:bg-primary">
+                    <div>
+                        <button class="py-5 px-12" onclick="send()">Envoyer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <script src="scripts/switch.js"></script>
     </body>
     <script src="scripts/activeNav.js"></script>
     <script src="scripts/mail.js"></script>
+    <script src="scripts/send.js"></script>
 </html>
