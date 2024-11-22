@@ -3,6 +3,7 @@ module.exports = {
   plugins: [
     require('tailwind-hamburgers'),
   ],
+  safelist: ["dark"],
   darkMode: 'class',
   content: ["./*.{html,js}"],
   theme: {

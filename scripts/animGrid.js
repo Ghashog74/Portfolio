@@ -5,11 +5,22 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+  var isActive;
+
+  window.onfocus = function () {
+    window.isActive = true;
+  };
+
+  window.onblur = function () {
+    window.isActive = false;
+  };
+window.isActive = true;
 function insert(item, num, num2){
   grid.insertBefore(item, document.getElementById('grid-item'+num2));
   item.id = 'grid-item'+num;
 }
 function switchGrid(){
+  if(window.isActive){
     let grid = document.querySelector('.grid');
     let num1 = getRandomNumber(1, 15);
     let num2 = getRandomNumber(1, 15);
@@ -72,7 +83,10 @@ function switchGrid(){
     //   onComplete: insert,
     //   onCompleteParams: [item2, num1, num3], 
     // })
+  }
+  console.log(window.isActive ? 'onglet actif' : 'onglet innactif');
 }
+
 
 setInterval(switchGrid, 3000);
 
