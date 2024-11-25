@@ -5,63 +5,103 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/styles/output.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./public/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
         <title>Contact</title>
     </head>
-    <!-- Début navbar -->
     <body class=" bg-repeat bg-top bg-background font-Poppins text-text bg-background-noise bg-contain">
-
-        <div class="fixed bottom-4 left-4">
-            <span class="sm:hidden">XS</span>
-            <span class="hidden sm:block md:hidden">SM</span>
-            <span class="hidden md:block lg:hidden">MD</span>
-            <span class="hidden lg:block xl:hidden">LG</span>
-            <span class="hidden xl:block 2xl:hidden">XL</span>
-            <span class="hidden 2xl:block 3xl:hidden">2XL</span>
+    <!-- Début navbar -->
+    <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-40 backdrop-blur-sm bg-opacity-50 border border-white/20">
+        <div class="flex items-center justify-center lg:w-1/6 max-lg:mx-1">
+          <h1 class="text-4xl font-thin font-Afacad-flux">Quentin</h1>
+        </div>
+        <div class="flex items-center justify-center mx-3 lg:hidden lg:w-0">
+          <button>
+            <div class="tham tham-e-squeeze tham-w-6">
+              <div class="tham-box">
+                <div class="tham-inner"></div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="lg:w-1/2 max-lg:hidden max-lg:w-0"></div>
+        <div class="flex justify-self-center justify-around items-center lg:w-4/5 max-lg:hidden max-lg:w-0">
+          <div class="">
+            <a href="#info">À propos</a>
           </div>
-
-        <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-50 backdrop-blur-sm bg-opacity-50 border border-white/20">
-            <div class="flex items-center justify-center lg:w-1/6 max-lg:mx-1">
-            <h1 class="text-4xl font-thin font-Afacad-flux">Quentin</h1>
+          <div class="">
+            <a href="#competences">Compétences</a>
+          </div>
+          <div class="">
+            <a href="#parcours">Parcours</a> 
+          </div>
+          <div class="">
+            <a href="#hscroll">Expériences</a>
+          </div>
+          <div class="">
+            <a href="#projets">Projets</a>
+          </div>
+          <div class="">
+            <a href="/contact.html">Contact</a>
+          </div class=" flex justify-center it">
+          <input type="checkbox" id="light-switch" class="light-switch sr-only" />
+          <label class="relative cursor-pointer p-2" for="light-switch">
+            <img src="icons/moon.svg" class="h-7 dark:hidden">
+            <img src="icons/sun.svg" class="h-7 hidden dark:block">
+          </label>
+          </div>
+        </div>
+        <div id="menu_container" class="flex justify-center items-center lg:hidden cursor-pointer mr-4">
+          <img src="icons/Burger Light.svg" class="h-16 w-16 dark:hidden">
+          <img src="icons/Burger Dark.svg" class="h-16 w-16 hidden dark:block">
+          <div id="menu" class="square-small hidden">
+            <div id="content" class="hidden h-full">
+              <div class="flex justify-between h-16 fixed w-full">
+                <div class="w-14 h-14 m-1 ml-3 flex justify-center items-center">
+                  <input type="checkbox" id="light-switch" class="light-switch sr-only" />
+                  <label class="relative cursor-pointer" for="light-switch">
+                    <img src="icons/moon.svg" class="h-12 w-12 dark:hidden">
+                    <img src="icons/sun.svg" class="h-12 w-12 hidden dark:block">
+                  </label>
+                </div>
+                <div id="close" class="w-16 h-16 mr-3 flex items-center justify-center">
+                  <img src="icons/Close Light.svg" class="h-16 w-16 dark:hidden">
+                  <img src="icons/Close Dark Icon.svg" class="h-16 w-16 hidden dark:block">
+                </div>
+              </div>
+              <div class="w-dvw h-full flex justify-center">
+                <div id="listeMobile" class="flex flex-col items-center justify-evenly w-1/2">
+                  <a href="./#info" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                    Accueil
+                  </a>
+                  <a href="./#competences" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                    Compétences
+                  </a>
+                  <a href="./#parcours" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                    Parcours
+                  </a>
+                  <a href="./#exp" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                    Expériences
+                  </a>
+                  <a href="./" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                    Projets
+                  </a>
+                  <a href="./contact.html" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                    Contact
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center justify-center mx-3 lg:hidden lg:w-0">
-            <button>
-                <i class="fa-solid fa-bars text-3xl lg:hidden"></i>
-            </button>
-            </div>
-            <div class="lg:w-1/2 max-lg:hidden max-lg:w-0"></div>
-            <div class="flex justify-self-center justify-around items-center lg:w-4/5 max-lg:hidden max-lg:w-0">
-            <div class="">
-                <a href="/index.html#info">À propos</a>
-            </div>
-            <div class="">
-                <a href="/index.html#competence">Compétences</a>
-            </div>
-            <div class="">
-                <a href="/index.html#parcours">Parcours</a> 
-            </div>
-            <div class="">
-                <a href="/index.html#experience">Expériences</a>
-            </div>
-            <div class="">
-                <a href="/index.html#projets">Projets</a>
-            </div>
-            <div class="active">
-                <a href="/contact.html">Contact</a>
-            </div class=" flex justify-center it">
-            <input type="checkbox" id="light-switch" class="light-switch sr-only" />
-            <label class="relative cursor-pointer p-2" for="light-switch">
-                <!-- <i class="fa-regular fa-moon text-xl dark:hidden"></i>
-                <i class="fa-regular fa-sun text-xl hidden dark:block"></i> -->
-                <img src="icons/moon.svg" class="h-7 dark:hidden">
-                <img src="icons/sun.svg" class="h-7 hidden dark:block">
-            </label>
-            </div>
-            </div>
-        </nav>
-        <!-- Fin navbar -->
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </nav>
+    <div id="container" class="fixed w-dvw h-full top-0 lg:hidden">
+      
+    </div>
+      <!-- Fin navbar -->
 
         <div class=" flex flex-col justify-center items-center max-2xl:mt-20 h-dvh text-text z-40">
             <!-- Titre "Nous contacter" -->
@@ -144,7 +184,6 @@
         
         <script src="scripts/switch.js"></script>
     </body>
-    <script src="scripts/activeNav.js"></script>
-    <script src="scripts/mail.js"></script>
+    <script type="module" src="scripts/toggleMenu.js"></script>
     <script src="scripts/send.js"></script>
 </html>

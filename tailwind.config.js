@@ -10,6 +10,7 @@ module.exports = {
     fontFamily: {
       'Poppins': ['Poppins', 'sans-serif'],
       'Afacad-flux': ['Afacad Flux', 'sans-serif'],
+      'Michroma': ['Michroma', 'sans-serif'],
     },
     extend: {
       colors: {

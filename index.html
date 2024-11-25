@@ -7,20 +7,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/me.png" type="image/x-icon">
+    <link href="dist/hamburgers.css" rel="stylesheet">
     <title>Portfolio</title>
   </head>
   <body class=" select-none bg-repeat-y bg-top font-Poppins bg-background bg-background-noise text-text bg-background-beams-with-collision bg-contain overflow-x-hidden">
-    <div class="fixed bottom-4 left-4">
-      <span class="sm:hidden">XS</span>
-      <span class="hidden sm:block md:hidden">SM</span>
-      <span class="hidden md:block lg:hidden">MD</span>
-      <span class="hidden lg:block xl:hidden">LG</span>
-      <span class="hidden xl:block 2xl:hidden">XL</span>
-      <span class="hidden 2xl:block 3xl:hidden">2XL</span>
-    </div>
+    <section id="loadingScreen" class="h-dvh w-dvw z-50 fixed bg-background flex flex-col items-center justify-center gap-10">
+      <svg id="logo-light" class="dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.54 197.9">
+        <path class="logoMain" d="M130.94,195h-32.2v-127.4c0-15-9.5-27.7-23.4-31.5-17.1-4.7-35.2,5.7-39.5,22.8-4.4,17.7,6.3,35.3,23.9,39.2,2.2.5,4.6.7,7,1v31.9c-10.9.2-21-2.3-31-7.6v72H4.84v-107.5c0-3-.6-5.9-1.2-8.9C-2.66,46.4,17.74,12.9,49.94,4.8c23.5-5.9,44.5-.5,62,16.8,12.9,12.8,19,28.1,19,46.2-.1,41.4,0,82.9,0,124.3,0,.9,0,1.8,0,2.9Z"/>
+        <path class="logoMain" d="M129.04,2.7c14.6,0,27.4,4.4,38.4,13.7,15.1,12.6,22.7,28.7,22.6,48.5-.2,42.5-.1,85-.1,127.5v2.9h-30.7V64.2c0-14.5-9.7-26.8-23.6-30-2.2-.5-4.4-.7-6.8-1,.2-10.1.2-20.2.2-30.5Z"/>  
+      </svg>
+      <svg id="logo-dark" class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.54 197.9">
+        <path class="logoMain" d="M130.94,195h-32.2v-127.4c0-15-9.5-27.7-23.4-31.5-17.1-4.7-35.2,5.7-39.5,22.8-4.4,17.7,6.3,35.3,23.9,39.2,2.2.5,4.6.7,7,1v31.9c-10.9.2-21-2.3-31-7.6v72H4.84v-107.5c0-3-.6-5.9-1.2-8.9C-2.66,46.4,17.74,12.9,49.94,4.8c23.5-5.9,44.5-.5,62,16.8,12.9,12.8,19,28.1,19,46.2-.1,41.4,0,82.9,0,124.3,0,.9,0,1.8,0,2.9Z"/>
+        <path class="logoMain" d="M129.04,2.7c14.6,0,27.4,4.4,38.4,13.7,15.1,12.6,22.7,28.7,22.6,48.5-.2,42.5-.1,85-.1,127.5v2.9h-30.7V64.2c0-14.5-9.7-26.8-23.6-30-2.2-.5-4.4-.7-6.8-1,.2-10.1.2-20.2.2-30.5Z"/>  
+      </svg>
+      <div id="textContainer" class="flex items-center justify-center h-10 overflow-hidden">
+        <p id="nomLogo" class="text-3xl font-Michroma">Quentin Montreuil</p>
+      </div>
+    </section>
     <!-- Début navbar -->
-    <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-50 backdrop-blur-sm bg-opacity-50 border border-white/20">
+    <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-40 backdrop-blur-sm bg-opacity-50 border border-white/20">
       <div class="flex items-center justify-center lg:w-1/6 max-lg:mx-1">
         <h1 class="text-4xl font-thin font-Afacad-flux">Quentin</h1>
       </div>
@@ -48,6 +55,9 @@
           <a href="#hscroll">Expériences</a>
         </div>
         <div class="">
+          <a href="#projets">Projets</a>
+        </div>
+        <div class="">
           <a href="/contact.html">Contact</a>
         </div class=" flex justify-center it">
         <input type="checkbox" id="light-switch" class="light-switch sr-only" />
@@ -57,12 +67,56 @@
         </label>
         </div>
       </div>
-      <div class="flex justify-center items-center lg:hidden cursor-pointer" onclick="toggleMenu()">
-        <img src="icons/Burger Light.svg" class=" h-16 w-16 dark:hidden">
-        <img src="icons/Burger Dark.svg" class=" h-16 w-16 hidden dark:block">
+      <div id="menu_container" class="flex justify-center items-center lg:hidden cursor-pointer mr-4">
+        <img src="icons/Burger Light.svg" class="h-16 w-16 dark:hidden">
+        <img src="icons/Burger Dark.svg" class="h-16 w-16 hidden dark:block">
+        <div id="menu" class="square-small hidden">
+          <div id="content" class="hidden h-full">
+            <div class="flex justify-between h-16 fixed w-full">
+              <div class="w-14 h-14 m-1 ml-3 flex justify-center items-center">
+                <input type="checkbox" id="light-switch" class="light-switch sr-only" />
+                <label class="relative cursor-pointer" for="light-switch">
+                  <img src="icons/moon.svg" class="h-12 w-12 dark:hidden">
+                  <img src="icons/sun.svg" class="h-12 w-12 hidden dark:block">
+                </label>
+              </div>
+              <div id="close" class="w-16 h-16 mr-3 flex items-center justify-center">
+                <img src="icons/Close Light.svg" class="h-16 w-16 dark:hidden">
+                <img src="icons/Close Dark Icon.svg" class="h-16 w-16 hidden dark:block">
+              </div>
+            </div>
+            <div class="w-dvw h-full flex justify-center">
+              <div id="listeMobile" class="flex flex-col items-center justify-evenly w-1/2">
+                <a href="./#info" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                  Accueil
+                </a>
+                <a href="./#competences" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                  Compétences
+                </a>
+                <a href="./#parcours" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                  Parcours
+                </a>
+                <a href="./#exp" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                  Expériences
+                </a>
+                <a href="./" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                  Projets
+                </a>
+                <a href="./contact.html" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
       </div>
     </div>
-    </nav>
+  </nav>
+  <div id="container" class="fixed w-dvw h-full top-0 lg:hidden">
+    
+  </div>
     <!-- Fin navbar -->
      
     <!-- Début section info -->
@@ -79,7 +133,7 @@
               <p class="max-lg:text-center">
                 Je m’appelle Quentin Montreuil, je suis actuellement étudiant en développement web et applicatif à l’institut G4 à Lyon. Depuis toujours passionné par l’informatique j’ai découvert le développement durant mon Bac Pro SN-RISC. J’ai une préférence pour le développement back-end mais je suis capable de faire du full-stack.
               </p>
-                <button class="bg-primary w-32 h-16 rounded-lg text-background">Mon cv</button>
+                <button class="bg-primary w-32 h-16 rounded-lg text-background hover:scale-105 transition-all hover:bg-secondary">Mon cv</button>
             </div>
           </div>
       </div>
@@ -147,7 +201,7 @@
     <!-- Fin section compétences -->
 
     <!-- Début section Parcours -->
-    <section id="parcours" class="max-h-dvh flex items-center justify-center h-dvh ">
+    <section id="parcours" class="max-h-dvh flex items-center justify-center h-dvh min-h-fit pt-16">
       <div class="w-full h-full gap-10 m-5 flex flex-col justify-evenly items-center text-center  lg:w-1/2">
 
 
@@ -356,7 +410,7 @@
 
       <!-- Début exp mobile -->
 
-    <section class="lg:hidden flex flex-col gap-10 ">
+    <section id="exp" class="lg:hidden flex flex-col gap-10 pt-20">
       <!-- Début exp 1 -->
       <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
         <div class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
@@ -520,6 +574,6 @@
   <script type="module" src="scripts/animScroll.js"></script>
   <script type="module" src="scripts/animGrid.js"></script>
   <script src="scripts/activeNav.js"></script>
-  <script type="module" src="scripts/animProject.js"></script>
-  <script src="scripts/toggleMenu.js"></script>
+  <script type="module" src="scripts/toggleMenu.js"></script>
+  <script type="module" src="scripts/accueil.js"></script>
 </html>

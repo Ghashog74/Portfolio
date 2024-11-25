@@ -572,6 +572,40 @@ video {
   --linkedin: #0A66C2;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -592,14 +626,6 @@ video {
   position: relative;
 }
 
-.bottom-4 {
-  bottom: 1rem;
-}
-
-.left-4 {
-  left: 1rem;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -610,6 +636,10 @@ video {
 
 .z-50 {
   z-index: 50;
+}
+
+.m-1 {
+  margin: 0.25rem;
 }
 
 .m-3 {
@@ -637,6 +667,18 @@ video {
 
 .ml-1 {
   margin-left: 0.25rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
 }
 
 .mr-5 {
@@ -669,6 +711,14 @@ video {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-16 {
@@ -718,6 +768,23 @@ video {
 
 .max-h-dvh {
   max-height: 100dvh;
+}
+
+.min-h-fit {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-16 {
@@ -855,6 +922,10 @@ video {
   justify-self: center;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -891,10 +962,6 @@ video {
   background-color: var(--secondary);
 }
 
-.bg-accent {
-  background-color: var(--accent);
-}
-
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -917,10 +984,6 @@ video {
 
 .bg-repeat-y {
   background-repeat: repeat-y;
-}
-
-.stroke-white {
-  stroke: #fff;
 }
 
 .stroke-2 {
@@ -985,12 +1048,24 @@ video {
   padding-bottom: 2.5rem;
 }
 
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .font-Afacad-flux {
   font-family: Afacad Flux, sans-serif;
+}
+
+.font-Michroma {
+  font-family: Michroma, sans-serif;
 }
 
 .font-Poppins {
@@ -1010,11 +1085,6 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1131,6 +1201,56 @@ video {
   left: 0;
 }
 
+.square-small{
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  right: 0;
+  background-color: var(--background);
+}
+
+.square-large{
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+}
+
+#logo-dark{
+  height: 250px;
+  width: 250px;
+  stroke: #fff;
+  stroke-width: 3px;
+  fill-opacity: 0;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+
+#logo-light{
+  height: 250px;
+  width: 250px;
+  stroke: #000;
+  stroke-width: 3px;
+  fill-opacity: 0;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+
+@keyframes draw {
+  0%{
+    stroke-dashoffset: 4500;
+  }
+
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:scale-125:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
@@ -1139,6 +1259,10 @@ video {
 
 .hover\:bg-primary:hover {
   background-color: var(--primary);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--secondary);
 }
 
 .dark\:block:is(.dark *) {
@@ -1155,10 +1279,6 @@ video {
 
 .dark\:border-white\/20:is(.dark *) {
   border-color: rgb(255 255 255 / 0.2);
-}
-
-.dark\:stroke-white:is(.dark *) {
-  stroke: #fff;
 }
 
 @media not all and (min-width: 1536px) {
@@ -1210,25 +1330,7 @@ video {
   }
 }
 
-@media (min-width: 640px) {
-  .sm\:block {
-    display: block;
-  }
-
-  .sm\:hidden {
-    display: none;
-  }
-}
-
 @media (min-width: 768px) {
-  .md\:block {
-    display: block;
-  }
-
-  .md\:hidden {
-    display: none;
-  }
-
   .md\:h-96 {
     height: 24rem;
   }
@@ -1239,10 +1341,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:block {
-    display: block;
-  }
-
   .lg\:hidden {
     display: none;
   }
@@ -1293,25 +1391,5 @@ video {
 
   .lg\:justify-center {
     justify-content: center;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:block {
-    display: block;
-  }
-
-  .xl\:hidden {
-    display: none;
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:block {
-    display: block;
-  }
-
-  .\32xl\:hidden {
-    display: none;
   }
 }

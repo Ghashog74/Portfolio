@@ -84,7 +84,6 @@ function switchGrid(){
     //   onCompleteParams: [item2, num1, num3], 
     // })
   }
-  console.log(window.isActive ? 'onglet actif' : 'onglet innactif');
 }
 
 
