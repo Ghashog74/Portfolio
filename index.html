@@ -12,7 +12,9 @@
     <link href="dist/hamburgers.css" rel="stylesheet">
     <title>Portfolio</title>
   </head>
-  <body class=" select-none bg-repeat-y bg-top font-Poppins bg-background bg-background-noise text-text bg-background-beams-with-collision bg-contain overflow-x-hidden">
+  <body class="select-none bg-repeat-y bg-top font-Poppins bg-background bg-background-noise text-text bg-background-beams-with-collision bg-contain overflow-x-hidden">
+    
+    
     <section id="loadingScreen" class="h-dvh w-dvw z-50 fixed bg-background flex flex-col items-center justify-center gap-10">
       <svg id="logo-light" class="dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.54 197.9">
         <path class="logoMain" d="M130.94,195h-32.2v-127.4c0-15-9.5-27.7-23.4-31.5-17.1-4.7-35.2,5.7-39.5,22.8-4.4,17.7,6.3,35.3,23.9,39.2,2.2.5,4.6.7,7,1v31.9c-10.9.2-21-2.3-31-7.6v72H4.84v-107.5c0-3-.6-5.9-1.2-8.9C-2.66,46.4,17.74,12.9,49.94,4.8c23.5-5.9,44.5-.5,62,16.8,12.9,12.8,19,28.1,19,46.2-.1,41.4,0,82.9,0,124.3,0,.9,0,1.8,0,2.9Z"/>
@@ -26,6 +28,8 @@
         <p id="nomLogo" class="text-3xl font-Michroma">Quentin Montreuil</p>
       </div>
     </section>
+    
+    
     <!-- Début navbar -->
     <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-40 backdrop-blur-sm bg-opacity-50 border border-white/20">
       <div class="flex items-center justify-center lg:w-1/6 max-lg:mx-1">
@@ -123,17 +127,17 @@
     <section id="info" class="flex justify-center items-center w-full h-dvh min-h-custom">
       <div class="my-12 flex flex-col items-center lg:flex-row lg:justify-center gap-4 mx-5 max-w-5xl p-2 rounded-lg backdrop-blur-sm bg-opacity-50 border border-white/20 shadow-lg">
           <div class="">
-            <img src="img/me.png" alt="" class="md:h-96 w-auto">
+            <img src="img/me.png" alt="" class="lg:h-96 w-auto">
           </div>
           <div class="flex flex-col gap-10 justify-around px-2 lg:w-1/2">
             <div class="">
-              <h2 class="text-5xl max-lg:text-center">Développeur Web</h2>
+              <h2 class="lg:text-5xl max-lg:text-center max-lg:text-3xl">Développeur Web</h2>
             </div>
             <div class="flex flex-col gap-4 max-lg:items-center m-3">
               <p class="max-lg:text-center">
                 Je m’appelle Quentin Montreuil, je suis actuellement étudiant en développement web et applicatif à l’institut G4 à Lyon. Depuis toujours passionné par l’informatique j’ai découvert le développement durant mon Bac Pro SN-RISC. J’ai une préférence pour le développement back-end mais je suis capable de faire du full-stack.
               </p>
-                <button class="bg-primary w-32 h-16 rounded-lg text-background hover:scale-105 transition-all hover:bg-secondary">Mon cv</button>
+                <a class="bg-primary w-32 h-16 rounded-lg text-background hover:scale-105 transition-all hover:bg-secondary flex items-center justify-center" download href="img/CV_Quentin-Montreuil.pdf">Mon CV</a>
             </div>
           </div>
       </div>
@@ -141,7 +145,8 @@
     <!-- Fin section info -->
 
     <!-- Début section compétences -->
-    <section id="competences" class="flex h-dvh justify-center items-center ">
+    <section id="competences" class=" flex flex-col gap-10 h-dvh justify-center items-center ">
+      <h2 class="text-3xl font-Michroma">Compétences</h2>
       <div class="lg:w-3/5 max-lg:w-5/6 h-3/5 flex gap-10 flex flex-col items-center">
         <div class="w-full h-full bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg flex items-center p-6 flex-col max-lg:max-w-96 lg:max-w-4xl">
           <div id="grid" class=" w-full h-full grid lg:grid-cols-5 lg:grid-rows-3 max-lg:grid-cols-3 max-lg:grid-rows-5 gap-3 p-3 competence-grid" id>
@@ -201,7 +206,8 @@
     <!-- Fin section compétences -->
 
     <!-- Début section Parcours -->
-    <section id="parcours" class="max-h-dvh flex items-center justify-center h-dvh min-h-fit pt-16">
+    <section id="parcours" class=" max-h-dvh flex flex-col gap-10 items-center justify-center h-dvh min-h-fit pt-24">
+      <h2 class="text-3xl font-Michroma">Parcours</h2>
       <div class="w-full h-full gap-10 m-5 flex flex-col justify-evenly items-center text-center  lg:w-1/2">
 
 
@@ -255,8 +261,12 @@
     </section>
     <!-- Fin section Parcours -->
     
+    
     <!-- Début section Expériences desktop -->
-    <section id="hscroll" class="flex conteneur-scroll-horizontal max-lg:hidden ">
+    <div class="translate-y-40 w-full flex justify-center items-center max-lg:hidden">
+      <h2 class="text-3xl font-Michroma">Expérience</h2>
+    </div>
+      <section id="hscroll" class=" flex conteneur-scroll-horizontal max-lg:hidden ">
       <!-- Début exp 1 -->
       <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
         <div class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
@@ -410,7 +420,8 @@
 
       <!-- Début exp mobile -->
 
-    <section id="exp" class="lg:hidden flex flex-col gap-10 pt-20">
+    <section id="exp" class="lg:hidden flex flex-col justify-center items-center gap-10 pt-20">
+      <h2 class="text-3xl font-Michroma">Expérience</h2>
       <!-- Début exp 1 -->
       <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
         <div class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
@@ -562,6 +573,70 @@
     
     <!-- Fin section Expériences mobile -->
 
+    <section id="projets" class="w-dvw h-dvh min-h-fit flex flex-col items-center justify-start mt-20">
+      <h2 class="text-3xl font-Michroma translate-y-40">Projets</h2>
+      <div class="w-full lg:h-full h-project grid max-lg:grid-rows-4 md:grid-cols-2 lg:grid-cols-4 justify-items-center items-center">
+
+        <div class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
+          <h2 class="smallTitle text-2xl">Cercle de projet</h2>
+          <p class="smallDate">Novembre 2024</p>
+          <img src="img/logo.png" class="smallImg h-40 w-40 object-contain" alt="">
+          <div class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center gap-20">
+            <h2 class="text-4xl">Cercle de projet</h2>
+            <p class="text-2xl">Novembre 2024</p>
+            <p class="lg:w-96 max-lg:w-5/6">
+              L’objectif était de réaliser une application qui puisse donner envie de s’engager pour la planète de manière ludique et immersive à l’aide d’une IA. Durant ce projet, nous avons eu l’occasion d’avoir des équipes inter-promotionnel, ce qui nous a permis de monter rapidement en compétences notamment avec les différents langages et frameworks tels que Symfony (PHP), TypeScript, TailwindCSS (CSS)
+            </p>
+            <img src="img/logo.png" class="h-60 w-60 object-contain">
+          </div>
+        </div>
+
+        <div class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
+          <h2 class="smallTitle text-2xl">Portfolio collectif</h2>
+          <p class="smallDate">Octobre-Novembre 2024</p>
+          <img src="img/Photo Classe 4032x3024.avif" class="smallImg h-40 w-40 object-contain" alt="">
+          <div class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center gap-20">
+            <h2 class="text-4xl">Portfolio collectif</h2>
+            <p class="text-2xl">Octobre-Novembre 2024</p>
+            <p class="lg:w-96 max-lg:w-5/6">
+              Ce projet visait à nous faire travailler nos compétences en développement frontend dans un contexte réaliste et motivant. L’objectif était à la fois de nous mettre en valeur individuellement à travers nos portfolios personnels. Mais également de promouvoir les compétences et les forces de notre promotion via notre portfolio commun de promotion.
+            </p>
+            <img src="img/Photo Classe 4032x3024.avif" class="h-60 w-60 object-contain">
+          </div>
+        </div>
+
+        <div class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
+          <h2 class="smallTitle text-2xl">E-commerce</h2>
+          <p class="smallDate">Septembre 2024</p>
+          <img src="icons/G4.png" class="smallImg h-40 w-40 object-contain" alt="">
+          <div class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center gap-20">
+            <h2 class="text-4xl">E-commerce</h2>
+            <p class="text-2xl">Septembre 2024</p>
+            <p class="lg:w-96 max-lg:w-5/6">
+              Ce projet nous a été donné avec pour objectif principal de monter en compétence dans l’utilisation du CMS WordPress. Ainsi, nous devions créer, à l’aide de WordPress, une boutique en ligne pour un e-commerce fictif de notre choix en assurant sa stabilité, sa sécurité et son référencement. Nous avons dû utiliser divers plugins tels que WooCommerce ou Yoast SEO et choisir un thème adapté à notre besoin.
+            </p>
+            <img src="icons/G4.png" class="h-60 w-60 object-contain">
+          </div>
+        </div>
+
+        <div class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
+          <h2 class="smallTitle text-2xl">E-commerce</h2>
+          <p class="smallDate">Septembre 2024</p>
+          <img src="icons/G4.png" class="smallImg h-40 w-40 object-contain" alt="">
+          <div class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center gap-20">
+            <h2 class="text-4xl">E-commerce</h2>
+            <p class="text-2xl">Septembre 2024</p>
+            <p class="lg:w-96 max-lg:w-5/6">
+              Ce projet nous a été donné avec pour objectif principal de monter en compétence dans l’utilisation du CMS WordPress. Ainsi, nous devions créer, à l’aide de WordPress, une boutique en ligne pour un e-commerce fictif de notre choix en assurant sa stabilité, sa sécurité et son référencement. Nous avons dû utiliser divers plugins tels que WooCommerce ou Yoast SEO et choisir un thème adapté à notre besoin.
+            </p>
+            <img src="icons/G4.png" class="h-60 w-60 object-contain">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
     <script>
       const tham = document.querySelector(".tham");
         
@@ -576,4 +651,5 @@
   <script src="scripts/activeNav.js"></script>
   <script type="module" src="scripts/toggleMenu.js"></script>
   <script type="module" src="scripts/accueil.js"></script>
+  <script type="module" src="scripts/animProject.js"></script>
 </html>

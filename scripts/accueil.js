@@ -5,7 +5,7 @@ let loadingScreen = document.getElementById("loadingScreen");
 gsap.to(loadingScreen , {
     opacity: 0,
     duration: 1,
-    delay: 3.5,
+    delay: 3,
     onComplete: () => {
         loadingScreen.classList.add("hidden");
     },
@@ -17,5 +17,5 @@ gsap.fromTo('#nomLogo', {
     y: 0,
     opacity: 1,
     duration: 1,
-    delay: 1.5,
+    delay: 1,
 });
