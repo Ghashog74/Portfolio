@@ -1365,6 +1365,10 @@ video {
   background-color: var(--secondary);
 }
 
+.active\:hidden:active {
+  display: none;
+}
+
 .dark\:block:is(.dark *) {
   display: block;
 }
