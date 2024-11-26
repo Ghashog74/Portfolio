@@ -39,6 +39,7 @@ projects.forEach((project) => {
             let placeholder = document.createElement('div');
             placeholder.className = 'placeholder';
             project.after(placeholder);
+            document.body.style.overflowY = 'hidden';
             tl.play();
         } else {
             project.classList.add('z-50');
@@ -55,6 +56,7 @@ projects.forEach((project) => {
                     document.querySelector('.placeholder').remove();
                 } else {
                     project.classList.remove('z-50');
+                    document.body.style.overflowY = 'auto';
                 }
             }
         });

@@ -22,6 +22,7 @@ function anim() {
         container.classList.add("z-50");
         square.classList.remove("square-small");
         square.classList.add("square-large");
+        document.body.style.overflowY = 'hidden';
     } else {
         // Fermer le menu
         content.classList.add("hidden");
@@ -39,6 +40,7 @@ function anim() {
             content.classList.remove("hidden");
             if (square.classList.contains("square-small")) {
                 square.classList.add("hidden");
+                document.body.style.overflowY = 'auto';
             }
             // S'assurer que les classes finales sont bien appliquées
         },
