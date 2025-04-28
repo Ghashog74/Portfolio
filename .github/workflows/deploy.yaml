@@ -1,4 +1,4 @@
-ame: Deploy via SFTP
+name: Deploy via SFTP
 
 on:
   push:
