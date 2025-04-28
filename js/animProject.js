@@ -1,5 +1,5 @@
-import { gsap } from "../node_modules/gsap/all.js";
-import { Flip } from "../node_modules/gsap/Flip.js";
+// import { gsap } from "./lib/gsap.js";
+// import { Flip } from "./lib/gsap-flip.js";
 gsap.registerPlugin(Flip);
 
 let projects = document.querySelectorAll(".projectCard");

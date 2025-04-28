@@ -1,4 +1,4 @@
-import { gsap } from "../node_modules/gsap/all.js";
+// import { gsap } from "./lib/gsap.js";
 
 let loadingScreen = document.getElementById("loadingScreen");
 document.body.style.overflowY = 'hidden';

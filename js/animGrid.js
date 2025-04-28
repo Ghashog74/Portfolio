@@ -1,6 +1,5 @@
-import { gsap } from "../node_modules/gsap/all.js";
+// import { gsap } from "./lib/gsap.js";
     
-import { ScrollTrigger } from "../node_modules/gsap/ScrollTrigger.js";
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }

@@ -1,10 +1,9 @@
-import { gsap } from "../node_modules/gsap/all.js";
-    
-import { ScrollTrigger } from "../node_modules/gsap/ScrollTrigger.js";
+// import { gsap } from "./lib/gsap.js";
+
+// import { ScrollTrigger } from "./lib/gsap-scroll.js";
 
 gsap.registerPlugin(ScrollTrigger);
 const contents = gsap.utils.toArray("#hscroll .content")
-
 
 gsap.to(contents, {
     xPercent: -100 * 3,
