@@ -23,6 +23,4 @@ jobs:
           local_path: './'
           remote_path: '/var/www/portfolio/'
           sftp_only: 'true'
-          exclude: |
-            .git*
-            node_modules
+          rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log --exclude=.github'
