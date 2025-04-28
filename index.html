@@ -1,655 +1,742 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/styles/output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="icons/logo-dark.svg" type="image/x-icon">
-    <link href="dist/hamburgers.css" rel="stylesheet">
-    <title>Portfolio</title>
-  </head>
-  <body class="select-none bg-repeat-y bg-top font-Poppins bg-background bg-background-noise text-text bg-background-beams-with-collision bg-contain overflow-x-hidden">
-    
-    
-    <section id="loadingScreen" class="h-dvh w-dvw z-50 fixed bg-background flex flex-col items-center justify-center gap-10">
-      <svg id="logo-light" class="dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.54 197.9">
-        <path class="logoMain" d="M130.94,195h-32.2v-127.4c0-15-9.5-27.7-23.4-31.5-17.1-4.7-35.2,5.7-39.5,22.8-4.4,17.7,6.3,35.3,23.9,39.2,2.2.5,4.6.7,7,1v31.9c-10.9.2-21-2.3-31-7.6v72H4.84v-107.5c0-3-.6-5.9-1.2-8.9C-2.66,46.4,17.74,12.9,49.94,4.8c23.5-5.9,44.5-.5,62,16.8,12.9,12.8,19,28.1,19,46.2-.1,41.4,0,82.9,0,124.3,0,.9,0,1.8,0,2.9Z"/>
-        <path class="logoMain" d="M129.04,2.7c14.6,0,27.4,4.4,38.4,13.7,15.1,12.6,22.7,28.7,22.6,48.5-.2,42.5-.1,85-.1,127.5v2.9h-30.7V64.2c0-14.5-9.7-26.8-23.6-30-2.2-.5-4.4-.7-6.8-1,.2-10.1.2-20.2.2-30.5Z"/>  
-      </svg>
-      <svg id="logo-dark" class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.54 197.9">
-        <path class="logoMain" d="M130.94,195h-32.2v-127.4c0-15-9.5-27.7-23.4-31.5-17.1-4.7-35.2,5.7-39.5,22.8-4.4,17.7,6.3,35.3,23.9,39.2,2.2.5,4.6.7,7,1v31.9c-10.9.2-21-2.3-31-7.6v72H4.84v-107.5c0-3-.6-5.9-1.2-8.9C-2.66,46.4,17.74,12.9,49.94,4.8c23.5-5.9,44.5-.5,62,16.8,12.9,12.8,19,28.1,19,46.2-.1,41.4,0,82.9,0,124.3,0,.9,0,1.8,0,2.9Z"/>
-        <path class="logoMain" d="M129.04,2.7c14.6,0,27.4,4.4,38.4,13.7,15.1,12.6,22.7,28.7,22.6,48.5-.2,42.5-.1,85-.1,127.5v2.9h-30.7V64.2c0-14.5-9.7-26.8-23.6-30-2.2-.5-4.4-.7-6.8-1,.2-10.1.2-20.2.2-30.5Z"/>  
-      </svg>
-      <div id="textContainer" class="flex items-center justify-center h-10 overflow-hidden">
-        <p id="nomLogo" class="text-3xl font-Michroma">Quentin Montreuil</p>
-      </div>
-    </section>
-    
-    
-    <!-- Début navbar -->
-    <nav class="flex max-lg:justify-between h-16 w-full fixed top-0 z-40 backdrop-blur-sm bg-opacity-50 border border-white/20">
-      <div class="flex items-center justify-center lg:w-1/6 max-lg:mx-1">
-        <h1 class="text-4xl font-thin font-Michroma">Quentin</h1>
-      </div>
-      <div class="flex items-center justify-center mx-3 lg:hidden lg:w-0">
-        <button>
-          <div class="tham tham-e-squeeze tham-w-6">
-            <div class="tham-box">
-              <div class="tham-inner"></div>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="lg:w-1/2 max-lg:hidden max-lg:w-0"></div>
-      <div class="flex justify-self-center justify-around items-center lg:w-4/5 max-lg:hidden max-lg:w-0">
-        <div class="">
-          <a href="#info">À propos</a>
-        </div>
-        <div class="">
-          <a href="#competences">Compétences</a>
-        </div>
-        <div class="">
-          <a href="#parcours">Parcours</a> 
-        </div>
-        <div class="">
-          <a href="#hscroll">Expériences</a>
-        </div>
-        <div class="">
-          <a href="#projets">Projets</a>
-        </div>
-        <div class="">
-          <a href="/contact.html">Contact</a>
-        </div class=" flex justify-center it">
-        <input type="checkbox" id="light-switch" class="light-switch sr-only" />
-        <label class="relative cursor-pointer p-2" for="light-switch">
-          <img src="icons/moon.svg" class="h-7 dark:hidden">
-          <img src="icons/sun.svg" class="h-7 hidden dark:block">
-        </label>
-        </div>
-      </div>
-      <div id="menu_container" class="flex justify-center items-center lg:hidden cursor-pointer mr-4">
-        <img src="icons/Burger Light.svg" class="h-16 w-16 dark:hidden">
-        <img src="icons/Burger Dark.svg" class="h-16 w-16 hidden dark:block">
-        <div id="menu" class="square-small hidden">
-          <div id="content" class="hidden h-full">
-            <div class="flex justify-between h-16 fixed w-full">
-              <div class="w-14 h-14 m-1 ml-3 flex justify-center items-center">
-                <input type="checkbox" id="light-switch" class="light-switch sr-only" />
-                <label class="relative cursor-pointer" for="light-switch">
-                  <img src="icons/moon.svg" class="h-12 w-12 dark:hidden">
-                  <img src="icons/sun.svg" class="h-12 w-12 hidden dark:block">
-                </label>
-              </div>
-              <div id="close" class="w-16 h-16 mr-3 flex items-center justify-center">
-                <img src="icons/Close Light.svg" class="h-16 w-16 dark:hidden">
-                <img src="icons/Close Dark Icon.svg" class="h-16 w-16 hidden dark:block">
-              </div>
-            </div>
-            <div class="w-dvw h-full flex justify-center">
-              <div id="listeMobile" class="flex flex-col items-center justify-evenly w-1/2">
-                <a href="./#info" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
-                  Accueil
-                </a>
-                <a href="./#competences" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
-                  Compétences
-                </a>
-                <a href="./#parcours" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
-                  Parcours
-                </a>
-                <a href="./#exp" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
-                  Expériences
-                </a>
-                <a href="./" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
-                  Projets
-                </a>
-                <a href="./contact.html" class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
-                  Contact
-                </a>
-              </div>
-            </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/styles/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="icons/logo-dark.svg" type="image/x-icon">
+  <link href="dist/hamburgers.css" rel="stylesheet">
+  <title>Portfolio</title>
+</head>
+
+<body
+  class="select-none bg-repeat-y bg-top font-Poppins bg-background bg-background-noise text-text bg-background-beams-with-collision bg-contain overflow-x-hidden">
+  <section id="loadingScreen"
+    class="h-dvh w-dvw z-50 fixed bg-background flex flex-col items-center justify-center gap-10">
+    <svg id="logo-light" class="dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.54 197.9">
+      <path class="logoMain"
+        d="M130.94,195h-32.2v-127.4c0-15-9.5-27.7-23.4-31.5-17.1-4.7-35.2,5.7-39.5,22.8-4.4,17.7,6.3,35.3,23.9,39.2,2.2.5,4.6.7,7,1v31.9c-10.9.2-21-2.3-31-7.6v72H4.84v-107.5c0-3-.6-5.9-1.2-8.9C-2.66,46.4,17.74,12.9,49.94,4.8c23.5-5.9,44.5-.5,62,16.8,12.9,12.8,19,28.1,19,46.2-.1,41.4,0,82.9,0,124.3,0,.9,0,1.8,0,2.9Z" />
+      <path class="logoMain"
+        d="M129.04,2.7c14.6,0,27.4,4.4,38.4,13.7,15.1,12.6,22.7,28.7,22.6,48.5-.2,42.5-.1,85-.1,127.5v2.9h-30.7V64.2c0-14.5-9.7-26.8-23.6-30-2.2-.5-4.4-.7-6.8-1,.2-10.1.2-20.2.2-30.5Z" />
+    </svg>
+    <svg id="logo-dark" class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.54 197.9">
+      <path class="logoMain"
+        d="M130.94,195h-32.2v-127.4c0-15-9.5-27.7-23.4-31.5-17.1-4.7-35.2,5.7-39.5,22.8-4.4,17.7,6.3,35.3,23.9,39.2,2.2.5,4.6.7,7,1v31.9c-10.9.2-21-2.3-31-7.6v72H4.84v-107.5c0-3-.6-5.9-1.2-8.9C-2.66,46.4,17.74,12.9,49.94,4.8c23.5-5.9,44.5-.5,62,16.8,12.9,12.8,19,28.1,19,46.2-.1,41.4,0,82.9,0,124.3,0,.9,0,1.8,0,2.9Z" />
+      <path class="logoMain"
+        d="M129.04,2.7c14.6,0,27.4,4.4,38.4,13.7,15.1,12.6,22.7,28.7,22.6,48.5-.2,42.5-.1,85-.1,127.5v2.9h-30.7V64.2c0-14.5-9.7-26.8-23.6-30-2.2-.5-4.4-.7-6.8-1,.2-10.1.2-20.2.2-30.5Z" />
+    </svg>
+    <div id="textContainer" class="flex items-center justify-center h-10 overflow-hidden">
+      <p id="nomLogo" class="text-3xl font-Michroma">Quentin Montreuil</p>
+    </div>
+  </section>
+
+  <!-- Début navbar -->
+  <nav
+    class="flex max-lg:justify-between h-16 w-full fixed top-0 z-40 backdrop-blur-sm bg-opacity-50 border border-white/20">
+    <div class="flex items-center justify-center lg:w-1/6 max-lg:mx-1">
+      <h1 class="text-4xl font-thin font-Michroma">Quentin</h1>
+    </div>
+    <div class="flex items-center justify-center mx-3 lg:hidden lg:w-0">
+      <button>
+        <div class="tham tham-e-squeeze tham-w-6">
+          <div class="tham-box">
+            <div class="tham-inner"></div>
           </div>
         </div>
+      </button>
+    </div>
+    <div class="lg:w-1/2 max-lg:hidden max-lg:w-0"></div>
+    <div class="flex justify-self-center justify-around items-center lg:w-4/5 max-lg:hidden max-lg:w-0">
+      <div class="">
+        <a href="#info">À propos</a>
       </div>
+      <div class="">
+        <a href="#competences">Compétences</a>
       </div>
+      <div class="">
+        <a href="#parcours">Parcours</a>
+      </div>
+      <div class="">
+        <a href="#hscroll">Expériences</a>
+      </div>
+      <div class="">
+        <a href="#projets">Projets</a>
+      </div>
+      <div class="">
+        <a href="/contact.html">Contact</a>
+      </div class=" flex justify-center it">
+      <input type="checkbox" id="light-switch" class="light-switch sr-only" />
+      <label class="relative cursor-pointer p-2" for="light-switch">
+        <img src="icons/moon.svg" class="h-7 dark:hidden">
+        <img src="icons/sun.svg" class="h-7 hidden dark:block">
+      </label>
+    </div>
+    </div>
+    <div id="menu_container" class="flex justify-center items-center lg:hidden cursor-pointer mr-4">
+      <img src="icons/Burger Light.svg" class="h-16 w-16 dark:hidden">
+      <img src="icons/Burger Dark.svg" class="h-16 w-16 hidden dark:block">
+      <div id="menu" class="square-small hidden">
+        <div id="content" class="hidden h-full">
+          <div class="flex justify-between h-16 fixed w-full">
+            <div class="w-14 h-14 m-1 ml-3 flex justify-center items-center">
+              <input type="checkbox" id="light-switch" class="light-switch sr-only" />
+              <label class="relative cursor-pointer" for="light-switch">
+                <img src="icons/moon.svg" class="h-12 w-12 dark:hidden">
+                <img src="icons/sun.svg" class="h-12 w-12 hidden dark:block">
+              </label>
+            </div>
+            <div id="close" class="w-16 h-16 mr-3 flex items-center justify-center">
+              <img src="icons/Close Light.svg" class="h-16 w-16 dark:hidden">
+              <img src="icons/Close Dark Icon.svg" class="h-16 w-16 hidden dark:block">
+            </div>
+          </div>
+          <div class="w-dvw h-full flex justify-center">
+            <div id="listeMobile" class="flex flex-col items-center justify-evenly w-1/2">
+              <a href="./#info"
+                class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                Accueil
+              </a>
+              <a href="./#competences"
+                class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                Compétences
+              </a>
+              <a href="./#parcours"
+                class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                Parcours
+              </a>
+              <a href="./#exp"
+                class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                Expériences
+              </a>
+              <a href="./"
+                class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                Projets
+              </a>
+              <a href="./contact.html"
+                class="w-full py-5 bg-primary text-background flex justify-center items-center rounded-xl shadow-lg hover:scale-105 transition-all">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
   <div id="container" class="fixed w-dvw h-full top-0 lg:hidden">
-    
+
   </div>
-    <!-- Fin navbar -->
-     
-    <!-- Début section info -->
-    <section id="info" class="flex justify-center items-center w-full h-dvh min-h-custom">
-      <div class="my-12 flex flex-col items-center lg:flex-row lg:justify-center gap-4 mx-5 max-w-5xl p-2 rounded-lg backdrop-blur-sm bg-opacity-50 border border-white/20 shadow-lg">
-          <div class="">
-            <img src="img/me.png" alt="" class="lg:h-96 w-auto">
-          </div>
-          <div class="flex flex-col gap-10 justify-around px-2 lg:w-1/2">
-            <div class="">
-              <h2 class="lg:text-5xl max-lg:text-center max-lg:text-3xl">Développeur Web</h2>
-            </div>
-            <div class="flex flex-col gap-4 max-lg:items-center m-3">
-              <p class="max-lg:text-center">
-                Je m’appelle Quentin Montreuil, je suis actuellement étudiant en développement web et applicatif à l’institut G4 à Lyon. Depuis toujours passionné par l’informatique j’ai découvert le développement durant mon Bac Pro SN-RISC. J’ai une préférence pour le développement back-end mais je suis capable de faire du full-stack.
-              </p>
-                <a class="bg-primary w-32 h-16 rounded-lg text-background hover:scale-105 transition-all hover:bg-secondary flex items-center justify-center" download href="img/CV_Quentin-Montreuil.pdf">Mon CV</a>
-            </div>
-          </div>
-      </div>
-    </section>
-    <!-- Fin section info -->
+  <!-- Fin navbar -->
 
-    <!-- Début section compétences -->
-    <section id="competences" class=" flex flex-col gap-10 h-dvh justify-center items-center ">
-      <h2 class="text-3xl font-Michroma">Compétences</h2>
-      <div class="lg:w-3/5 max-lg:w-5/6 h-3/5 flex gap-10 flex flex-col items-center">
-        <div class="w-full h-full bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg flex items-center p-6 flex-col max-lg:max-w-96 lg:max-w-4xl">
-          <div id="grid" class=" w-full h-full grid lg:grid-cols-5 lg:grid-rows-3 max-lg:grid-cols-3 max-lg:grid-rows-5 gap-3 p-3 competence-grid" id>
-            <div id="grid-item1" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/html.svg" class="max-h-28">
-            </div>
-            <div id="grid-item2" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/css.svg" class="max-h-28">
-            </div>
-            <div id="grid-item3" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/js.svg" class="max-h-28">
-            </div>
-            <div id="grid-item4" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/Php_light.svg" class="dark:hidden max-h-28">
-              <img src="icons/Php_dark.svg" class="hidden dark:block max-h-28">
-            </div>
-            <div id="grid-item5" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/cakephp.svg" class="max-h-28">
-            </div>
-            <div id="grid-item6" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/tailwind.svg" class="max-h-28">
-            </div>
-            <div id="grid-item7" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/mariadb.svg" class="max-h-28">
-            </div>
-            <div id="grid-item8" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/python.svg" class="max-h-28">
-            </div>
-            <div id="grid-item9" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/cpp.svg" class="max-h-28">
-            </div>
-            <div id="grid-item10" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/Github_light.svg" class="dark:hidden max-h-28">
-              <img src="icons/Github_dark.svg" class="hidden dark:block max-h-28">
-            </div>
-            <div id="grid-item11" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/vscode.svg" class="max-h-28">
-            </div>
-            <div id="grid-item12" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/docker.svg" class="max-h-28">
-            </div>
-            <div id="grid-item13" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/linux.svg" class="max-h-28">
-            </div>
-            <div id="grid-item14" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/server-light.svg" class="dark:hidden max-h-28">
-              <img src="icons/server-dark.svg" class="hidden dark:block max-h-28">
-            </div>
-            <div id="grid-item15" class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
-              <img src="icons/network-light.svg" class="dark:hidden max-h-28">
-              <img src="icons/network-dark.svg" class="hidden dark:block max-h-28">
-            </div>
-            <div id="grid-item16"></div>
+  <!-- Début section info -->
+  <section id="info" class="flex justify-center items-center w-full h-dvh min-h-custom">
+    <div
+      class="my-12 flex flex-col items-center lg:flex-row lg:justify-center gap-4 mx-5 max-w-5xl p-2 rounded-lg backdrop-blur-sm bg-opacity-50 border border-white/20 shadow-lg">
+      <div class="">
+        <img src="img/me.png" alt="" class="lg:h-96 w-auto">
+      </div>
+      <div class="flex flex-col gap-10 justify-around px-2 lg:w-1/2">
+        <div class="">
+          <h2 class="lg:text-5xl max-lg:text-center max-lg:text-3xl">Développeur Web</h2>
+        </div>
+        <div class="flex flex-col gap-4 max-lg:items-center m-3">
+          <p class="max-lg:text-center">
+            Je m’appelle Quentin Montreuil, je suis actuellement étudiant en développement web et applicatif à
+            l’institut G4 à Lyon. Depuis toujours passionné par l’informatique j’ai découvert le développement durant
+            mon Bac Pro SN-RISC. J’ai une préférence pour le développement back-end mais je suis capable de faire du
+            full-stack.
+          </p>
+          <a class="bg-primary w-32 h-16 rounded-lg text-background hover:scale-105 transition-all hover:bg-secondary flex items-center justify-center"
+            download href="img/CV_Quentin-Montreuil.pdf">Mon CV</a>
         </div>
       </div>
-    </section>
-    <!-- Fin section compétences -->
-
-    <!-- Début section Parcours -->
-    <section id="parcours" class=" max-h-dvh flex flex-col gap-10 items-center justify-center h-dvh min-h-fit pt-24">
-      <h2 class="text-3xl font-Michroma">Parcours</h2>
-      <div class="w-full h-full gap-10 m-5 flex flex-col justify-evenly items-center text-center  lg:w-1/2">
-
-
-        
-        <div class="gap-3 flex items-center flex-col p-10 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg max-lg:max-w-96 lg:w-full">
-          <div>
-            <img src="icons/G4.png" class="h-20">
-          </div>
-          <h2>BACHELOR CONCEPTEUR DÉVELOPPEUR D’APPLICATION</h2>
-          <p>2024-2027</p>
-          <p>Institut G4 / Lyon</p>
-          <div class="flex flex-row gap-2 flex-wrap justify-center">
-            <img src="icons/network-light.svg" alt="" class="dark:hidden h-10 hover:scale-125 transition-all">
-            <img src="icons/network-dark.svg" alt="" class="dark:block hidden h-10 hover:scale-125 transition-all">
-            <img src="icons/vscode.svg" alt="" class="h-10 hover:scale-125 transition-all">
-            <img src="icons/Php_light.svg" alt="" class="h-10 dark:hidden hover:scale-125 transition-all">
-            <img src="icons/Php_dark.svg" alt="" class="h-10 hidden dark:block hover:scale-125 transition-all">
-            <img src="icons/linux.svg" alt="" class="h-10 hover:scale-125 transition-all">
-            <img src="icons/github_light.svg" alt="" class="dark:hidden h-10 hover:scale-125 transition-all">
-            <img src="icons/Github_dark.svg" alt="" class="dark:block hidden h-10 hover:scale-125 transition-all">
-            <img src="icons/html.svg" alt="" class="h-10 hover:scale-125 transition-all">
-            <img src="icons/css.svg" alt="" class="h-10 hover:scale-125 transition-all">
-            <img src="icons/js.svg" alt="" class="h-10 hover:scale-125 transition-all">
-            <img src="icons/tailwind.svg" alt="" class="h-10 hover:scale-125 transition-all">
-          </div>
-        </div>
-
-
-
-
-
-        <div class="flex flex-col items-center gap-3 p-10 bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg max-lg:max-w-96 lg:w-full ">
-          <div>
-            <img src="icons/st-vincent.png" class="h-20">
-          </div>
-          <h2>BAC PROFESSIONNEL SN-RISC</h2>
-          <p>2021-2024</p>
-          <p>LP St-Vincent / Collonges-sous-Salève Obtention avec mention Très bien</p>
-          <div class="flex flex-row gap-2 flex-wrap justify-center">
-            <img src="icons/cpp.svg" alt="" class="h-10 hover:scale-125 transition-all">
-            <img src="icons/python.svg" alt="" class="h-10 hover:scale-125 transition-all">
-            <img src="icons/network-light.svg" alt="" class="dark:hidden h-10 hover:scale-125 transition-all">
-            <img src="icons/network-dark.svg" alt="" class="dark:block hidden h-10 hover:scale-125 transition-all">
-            <img src="icons/server-light.svg" alt="" class="dark:hidden h-10 hover:scale-125 transition-all">
-            <img src="icons/server-dark.svg" alt="" class="dark:block hidden h-10 hover:scale-125 transition-all">
-            <img src="icons/linux.svg" alt="" class="h-10 hover:scale-125 transition-all">
-            <img src="icons/html.svg" alt="" class="h-10 hover:scale-125 transition-all">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Fin section Parcours -->
-    
-    
-    <!-- Début section Expériences desktop -->
-    <div class="translate-y-40 w-full flex justify-center items-center max-lg:hidden">
-      <h2 class="text-3xl font-Michroma">Expérience</h2>
     </div>
-      <section id="hscroll" class=" flex conteneur-scroll-horizontal max-lg:hidden ">
-      <!-- Début exp 1 -->
-      <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
-        <div class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <div class="flex flex-col justify-between">
-            <div class="flex flex-col gap-8">
-              <p class="text-5xl font-bold">Stagiaire Développeur</p>
-              <div class="flex items-center gap-2">
-                <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
-                <p>18.03.2024 - 13.04.2024</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/company-light.svg" class="h-5 dark:hidden">
-                <p>Cham.fr</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/location-light.svg" class="h-5 dark:hidden">
-                <p>Chamonix</p>
-              </div>
-              <p class="w-2/3">Développement d'un portail captif avec CakePHP communicant avec un controlleur Ubiquity .</p>
-            </div>
-            <div class="flex gap-3">
-              <img src="./icons/cakephp.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
-              <img src="./icons/Php_light.svg" class="h-16 w-16 object-fit dark:hidden hover:scale-125 transition-all">
-              <img src="./icons/Php_dark.svg" class="h-16 w-16 object-fit hidden dark:block hover:scale-125 transition-all">
-              <img src="./icons/html.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
-              <img src="./icons/css.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
-              <img src="./icons/js.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
-              <img src="./icons/mariadb.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
-              <img src="./icons/server-light.svg" class="h-16 w-16 object-fit dark:hidden hover:scale-125 transition-all">
-              <img src="./icons/server-dark.svg" class="h-16 w-16 object-fit hidden dark:block hover:scale-125 transition-all">
-            </div>
+  </section>
+  <!-- Fin section info -->
+
+  <!-- Début section compétences -->
+  <section id="competences" class=" flex flex-col gap-10 h-dvh justify-center items-center ">
+    <h2 class="text-3xl font-Michroma">Compétences</h2>
+    <div class="lg:w-3/5 max-lg:w-5/6 h-3/5 flex gap-10 flex flex-col items-center">
+      <div
+        class="w-full h-full bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg flex items-center p-6 flex-col max-lg:max-w-96 lg:max-w-4xl">
+        <div id="grid"
+          class=" w-full h-full grid lg:grid-cols-5 lg:grid-rows-3 max-lg:grid-cols-3 max-lg:grid-rows-5 gap-3 p-3 competence-grid"
+          id>
+          <div id="grid-item1"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/html.svg" class="max-h-28">
           </div>
-          <div class="flex items-center justify-items-center">
-            <img src="icons/chamfr.png" class="object-contain w-96 h-96">
+          <div id="grid-item2"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/css.svg" class="max-h-28">
           </div>
+          <div id="grid-item3"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/js.svg" class="max-h-28">
+          </div>
+          <div id="grid-item4"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/Php_light.svg" class="dark:hidden max-h-28">
+            <img src="icons/Php_dark.svg" class="hidden dark:block max-h-28">
+          </div>
+          <div id="grid-item5"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/cakephp.svg" class="max-h-28">
+          </div>
+          <div id="grid-item6"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/tailwind.svg" class="max-h-28">
+          </div>
+          <div id="grid-item7"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/mariadb.svg" class="max-h-28">
+          </div>
+          <div id="grid-item8"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/python.svg" class="max-h-28">
+          </div>
+          <div id="grid-item9"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/cpp.svg" class="max-h-28">
+          </div>
+          <div id="grid-item10"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/Github_light.svg" class="dark:hidden max-h-28">
+            <img src="icons/Github_dark.svg" class="hidden dark:block max-h-28">
+          </div>
+          <div id="grid-item11"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/vscode.svg" class="max-h-28">
+          </div>
+          <div id="grid-item12"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/docker.svg" class="max-h-28">
+          </div>
+          <div id="grid-item13"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/linux.svg" class="max-h-28">
+          </div>
+          <div id="grid-item14"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/server-light.svg" class="dark:hidden max-h-28">
+            <img src="icons/server-dark.svg" class="hidden dark:block max-h-28">
+          </div>
+          <div id="grid-item15"
+            class="grid-item bg-background rounded-lg p-5 flex justify-center items-center shadow-lg dark:border dark:border-white/20">
+            <img src="icons/network-light.svg" class="dark:hidden max-h-28">
+            <img src="icons/network-dark.svg" class="hidden dark:block max-h-28">
+          </div>
+          <div id="grid-item16"></div>
         </div>
       </div>
-      <!-- Fin exp 1 -->
+  </section>
+  <!-- Fin section compétences -->
 
-      <!-- Début exp 2 -->
-      <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
-        <div class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <div class="flex flex-col justify-between">
-            <div class="flex flex-col gap-8">
-              <p class="text-5xl font-bold">Stagiaire Technicien Réseau</p>
-              <div class="flex items-center gap-2">
-                <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
-                <p>27.11.2023 - 23.12.2023</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/company-light.svg" class="h-5 dark:hidden">
-                <p>Koesio</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/location-light.svg" class="h-5 dark:hidden">
-                <p>Echirolles</p>
-              </div>
-              <p class="w-2/3">Interventions diverses sur l'infrastructure des clients.</p>
-            </div>
-            <div class="flex gap-3">
-              <img src="./icons/network-dark.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
-              <img src="./icons/network-light.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
-            </div>
-          </div>
-          <div class="flex items-center justify-items-center self-center">
-            <img src="icons/koesio-logo.jpg" class="object-contain w-96 h-96">
-          </div>
+  <!-- Début section Parcours -->
+  <section id="parcours" class=" max-h-dvh flex flex-col gap-10 items-center justify-center h-dvh min-h-fit pt-24">
+    <h2 class="text-3xl font-Michroma">Parcours</h2>
+    <div class="w-full h-full gap-10 m-5 flex flex-col justify-evenly items-center text-center  lg:w-1/2">
+
+
+
+      <div
+        class="gap-3 flex items-center flex-col p-10 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg max-lg:max-w-96 lg:w-full">
+        <div>
+          <img src="icons/G4.png" class="h-20">
+        </div>
+        <h2>BACHELOR CONCEPTEUR DÉVELOPPEUR D’APPLICATION</h2>
+        <p>2024-2027</p>
+        <p>Institut G4 / Lyon</p>
+        <div class="flex flex-row gap-2 flex-wrap justify-center">
+          <img src="icons/network-light.svg" alt="" class="dark:hidden h-10 hover:scale-125 transition-all">
+          <img src="icons/network-dark.svg" alt="" class="dark:block hidden h-10 hover:scale-125 transition-all">
+          <img src="icons/vscode.svg" alt="" class="h-10 hover:scale-125 transition-all">
+          <img src="icons/Php_light.svg" alt="" class="h-10 dark:hidden hover:scale-125 transition-all">
+          <img src="icons/Php_dark.svg" alt="" class="h-10 hidden dark:block hover:scale-125 transition-all">
+          <img src="icons/linux.svg" alt="" class="h-10 hover:scale-125 transition-all">
+          <img src="icons/github_light.svg" alt="" class="dark:hidden h-10 hover:scale-125 transition-all">
+          <img src="icons/Github_dark.svg" alt="" class="dark:block hidden h-10 hover:scale-125 transition-all">
+          <img src="icons/html.svg" alt="" class="h-10 hover:scale-125 transition-all">
+          <img src="icons/css.svg" alt="" class="h-10 hover:scale-125 transition-all">
+          <img src="icons/js.svg" alt="" class="h-10 hover:scale-125 transition-all">
+          <img src="icons/tailwind.svg" alt="" class="h-10 hover:scale-125 transition-all">
         </div>
       </div>
-      <!-- Fin exp 2 -->
 
-      <!-- Début exp 3 -->
-      <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
-        <div class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <div class="flex flex-col justify-between">
-            <div class="flex flex-col gap-8">
-              <p class="text-5xl font-bold">Stagiaire Technicien Réseau</p>
-              <div class="flex items-center gap-2">
-                <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
-                <p>12.06.2023 - 08.07.2023</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/company-light.svg" class="h-5 dark:hidden">
-                <p>Nicomatic</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/location-light.svg" class="h-5 dark:hidden">
-                <p>Bons en Chablais</p>
-              </div>
-              <p class="w-2/3">Intervention sur l'infrastructure de l'entreprise, réponse au ticket d'aide et création d'un plan réseau de l'entreprise .</p>
-            </div>
-            <div class="flex gap-3">
-              <img src="./icons/network-dark.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
-              <img src="./icons/network-light.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
-            </div>
-          </div>
-          <div class="flex items-center justify-items-center">
-            <img src="icons/nicomatic-logo.png" class="object-contain w-96 h-96">
-          </div>
+
+
+
+
+      <div
+        class="flex flex-col items-center gap-3 p-10 bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg max-lg:max-w-96 lg:w-full ">
+        <div>
+          <img src="icons/st-vincent.png" class="h-20">
+        </div>
+        <h2>BAC PROFESSIONNEL SN-RISC</h2>
+        <p>2021-2024</p>
+        <p>LP St-Vincent / Collonges-sous-Salève Obtention avec mention Très bien</p>
+        <div class="flex flex-row gap-2 flex-wrap justify-center">
+          <img src="icons/cpp.svg" alt="" class="h-10 hover:scale-125 transition-all">
+          <img src="icons/python.svg" alt="" class="h-10 hover:scale-125 transition-all">
+          <img src="icons/network-light.svg" alt="" class="dark:hidden h-10 hover:scale-125 transition-all">
+          <img src="icons/network-dark.svg" alt="" class="dark:block hidden h-10 hover:scale-125 transition-all">
+          <img src="icons/server-light.svg" alt="" class="dark:hidden h-10 hover:scale-125 transition-all">
+          <img src="icons/server-dark.svg" alt="" class="dark:block hidden h-10 hover:scale-125 transition-all">
+          <img src="icons/linux.svg" alt="" class="h-10 hover:scale-125 transition-all">
+          <img src="icons/html.svg" alt="" class="h-10 hover:scale-125 transition-all">
         </div>
       </div>
-      <!-- Fin exp 3 -->
-
-      <!-- Début exp 4 -->
-      <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
-        <div class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <div class="flex flex-col justify-between">
-            <div class="flex flex-col gap-8">
-              <p class="text-5xl font-bold">Stagiaire Technicien Réseau</p>
-              <div class="flex items-center gap-2">
-                <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
-                <p>09.01.2023 - 04.02.2023</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/company-light.svg" class="h-5 dark:hidden">
-                <p>Nicomatic</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/location-light.svg" class="h-5 dark:hidden">
-                <p>Bons en Chablais</p>
-              </div>
-              <p class="w-2/3">Intervention sur l'infrastructure de l'entreprise et réponse au ticket d'aide .</p>
-            </div>
-            <div class="flex gap-3">
-              <img src="./icons/network-dark.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
-              <img src="./icons/network-light.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
-            </div>
-          </div>
-          <div class="flex items-center justify-items-center">
-            <img src="icons/nicomatic-logo.png" class="object-contain w-96 h-96">
-          </div>
-        </div>
-      </div>
-      <!-- Fin exp 4 -->
-    </section>
-     
-      <!-- Fin exp desktop -->
+    </div>
+  </section>
+  <!-- Fin section Parcours -->
 
 
-      <!-- Début exp mobile -->
-
-    <section id="exp" class="lg:hidden flex flex-col justify-center items-center gap-10 pt-20">
-      <h2 class="text-3xl font-Michroma">Expérience</h2>
-      <!-- Début exp 1 -->
-      <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
-        <div class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <div class="flex flex-col gap-5">
-            <div class="flex flex-col gap-8">
-              <p class="text-3xl font-bold">Stagiaire Développeur</p>
-              <div class="flex items-center gap-2">
-                <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
-                <p>18.03.2024 - 13.04.2024</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/company-light.svg" class="h-5 dark:hidden">
-                <p>Cham.fr</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/location-light.svg" class="h-5 dark:hidden">
-                <p>Chamonix</p>
-              </div>
-              <p class="">Développement d'un portail captif avec CakePHP communicant avec un controlleur Ubiquity .</p>
+  <!-- Début section Expériences desktop -->
+  <div class="translate-y-40 w-full flex justify-center items-center max-lg:hidden">
+    <h2 class="text-3xl font-Michroma">Expérience</h2>
+  </div>
+  <section id="hscroll" class=" flex conteneur-scroll-horizontal max-lg:hidden ">
+    <!-- Début exp 1 -->
+    <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
+      <div
+        class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-col gap-8">
+            <p class="text-5xl font-bold">Stagiaire Développeur</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
+              <p>18.03.2024 - 13.04.2024</p>
             </div>
-            <div class="flex gap-3 flex-wrap justify-center items-center">
-              <img src="./icons/cakephp.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
-              <img src="./icons/Php_light.svg" class="h-8 w-8 object-fit dark:hidden hover:scale-125 transition-all">
-              <img src="./icons/Php_dark.svg" class="h-8 w-8 object-fit hidden dark:block hover:scale-125 transition-all">
-              <img src="./icons/html.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
-              <img src="./icons/css.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
-              <img src="./icons/js.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
-              <img src="./icons/mariadb.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
-              <img src="./icons/server-light.svg" class="h-8 w-8 object-fit dark:hidden hover:scale-125 transition-all">
-              <img src="./icons/server-dark.svg" class="h-8 w-8 object-fit hidden dark:block hover:scale-125 transition-all">
+            <div class="flex items-center gap-2">
+              <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/company-light.svg" class="h-5 dark:hidden">
+              <p>Cham.fr</p>
             </div>
-          </div>
-          <div class="flex items-center justify-center">
-            <img src="icons/chamfr.png" class="object-contain h-20 w-20">
-          </div>
-        </div>
-      </div>
-      <!-- Fin exp 1 -->
-
-      <!-- Début exp 2 -->
-      <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
-        <div class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <div class="flex flex-col gap-5">
-            <div class="flex flex-col gap-8">
-              <p class="text-3xl font-bold">Stagiaire Technicien Réseau</p>
-              <div class="flex items-center gap-2">
-                <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
-                <p>27.11.2023 - 23.12.2023</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/company-light.svg" class="h-5 dark:hidden">
-                <p>Koesio</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/location-light.svg" class="h-5 dark:hidden">
-                <p>Echirolles</p>
-              </div>
-              <p class="">Interventions diverses sur l'infrastructure des clients.</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/location-light.svg" class="h-5 dark:hidden">
+              <p>Chamonix</p>
             </div>
-            <div class="flex gap-3 flex-wrap justify-center items-center">
-              <img src="./icons/network-dark.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
-              <img src="./icons/network-light.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
-            </div>
-          </div>
-          <div class="flex items-center justify-center">
-            <img src="icons/koesio-logo.jpg" class="object-contain w-20 h-20">
-          </div>
-        </div>
-      </div>
-      <!-- Fin exp 2 -->
-
-      <!-- Début exp 3 -->
-      <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
-        <div class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <div class="flex flex-col gap-5">
-            <div class="flex flex-col gap-8">
-              <p class="text-3xl font-bold">Stagiaire Technicien Réseau</p>
-              <div class="flex items-center gap-2">
-                <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
-                <p>12.06.2023 - 08.07.2023</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/company-light.svg" class="h-5 dark:hidden">
-                <p>Nicomatic</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/location-light.svg" class="h-5 dark:hidden">
-                <p>Bons en Chablais</p>
-              </div>
-              <p class="">Intervention sur l'infrastructure de l'entreprise, réponse au ticket d'aide et création d'un plan réseau de l'entreprise .</p>
-            </div>
-            <div class="flex gap-3 flex-wrap justify-center items-center">
-              <img src="./icons/network-dark.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
-              <img src="./icons/network-light.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
-            </div>
-          </div>
-          <div class="flex items-center justify-center">
-            <img src="icons/nicomatic-logo.png" class="object-contain w-20 h-20">
-          </div>
-        </div>
-      </div>
-      <!-- Fin exp 3 -->
-
-      <!-- Début exp 4 -->
-      <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
-        <div class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
-          <div class="flex flex-col justify-between">
-            <div class="flex flex-col gap-8">
-              <p class="text-3xl font-bold">Stagiaire Technicien Réseau</p>
-              <div class="flex items-center gap-2">
-                <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
-                <p>09.01.2023 - 04.02.2023</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/company-light.svg" class="h-5 dark:hidden">
-                <p>Nicomatic</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
-                <img src="icons/location-light.svg" class="h-5 dark:hidden">
-                <p>Bons en Chablais</p>
-              </div>
-              <p class="">Intervention sur l'infrastructure de l'entreprise et réponse au ticket d'aide .</p>
-            </div>
-            <div class="flex gap-3 flex-wrap justify-center items-center">
-              <img src="./icons/network-dark.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
-              <img src="./icons/network-light.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
-            </div>
-          </div>
-          <div class="flex items-center justify-center">
-            <img src="icons/nicomatic-logo.png" class="object-contain h-20 w-20">
-          </div>
-        </div>
-      </div>
-      <!-- Fin exp 4 -->
-
-    </section>
-    
-    <!-- Fin section Expériences mobile -->
-
-    <section id="projets" class="w-dvw h-dvh min-h-fit flex flex-col items-center justify-start mt-20">
-      <h2 class="text-3xl font-Michroma translate-y-40">Projets</h2>
-      <div class="w-full lg:h-full h-project grid max-lg:grid-rows-4 md:grid-cols-2 lg:grid-cols-4 justify-items-center items-center">
-
-        <div class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
-          <h2 class="smallTitle text-2xl">Cercle de projet</h2>
-          <p class="smallDate">Novembre 2024</p>
-          <img src="img/logo.png" class="smallImg h-40 w-40 object-contain" alt="">
-          <div class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center lg:gap-20 max-lg:gap-10">
-            <h2 class="text-4xl">Cercle de projet</h2>
-            <p class="text-2xl">Novembre 2024</p>
-            <p class="lg:w-96 max-lg:w-5/6">
-              L’objectif était de réaliser une application qui puisse donner envie de s’engager pour la planète de manière ludique et immersive à l’aide d’une IA. Durant ce projet, nous avons eu l’occasion d’avoir des équipes inter-promotionnel, ce qui nous a permis de monter rapidement en compétences notamment avec les différents langages et frameworks tels que Symfony (PHP), TypeScript, TailwindCSS (CSS)
+            <p class="w-2/3">Développement d'un portail captif avec CakePHP communicant avec un controlleur Ubiquity .
             </p>
-            <img src="img/logo.png" class="lg:h-60 lg:w-60 w-32 h-32 object-contain">
+          </div>
+          <div class="flex gap-3">
+            <img src="./icons/cakephp.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
+            <img src="./icons/Php_light.svg" class="h-16 w-16 object-fit dark:hidden hover:scale-125 transition-all">
+            <img src="./icons/Php_dark.svg"
+              class="h-16 w-16 object-fit hidden dark:block hover:scale-125 transition-all">
+            <img src="./icons/html.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
+            <img src="./icons/css.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
+            <img src="./icons/js.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
+            <img src="./icons/mariadb.svg" class="h-16 w-16 object-fit hover:scale-125 transition-all">
+            <img src="./icons/server-light.svg" class="h-16 w-16 object-fit dark:hidden hover:scale-125 transition-all">
+            <img src="./icons/server-dark.svg"
+              class="h-16 w-16 object-fit hidden dark:block hover:scale-125 transition-all">
           </div>
         </div>
-
-        <div class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
-          <h2 class="smallTitle text-2xl">Portfolio collectif</h2>
-          <p class="smallDate">Octobre-Novembre 2024</p>
-          <img src="img/Photo Classe 4032x3024.avif" class="smallImg h-40 w-40 object-contain" alt="">
-          <div class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center lg:gap-20 max-lg:gap-10">
-            <h2 class="text-4xl">Portfolio collectif</h2>
-            <p class="text-2xl">Octobre-Novembre 2024</p>
-            <p class="lg:w-96 max-lg:w-5/6">
-              Ce projet visait à nous faire travailler nos compétences en développement frontend dans un contexte réaliste et motivant. L’objectif était à la fois de nous mettre en valeur individuellement à travers nos portfolios personnels. Mais également de promouvoir les compétences et les forces de notre promotion via notre portfolio commun de promotion.
-            </p>
-            <img src="img/Photo Classe 4032x3024.avif" class="lg:h-60 lg:w-60 w-32 h-32 object-contain">
-          </div>
+        <div class="flex items-center justify-items-center">
+          <img src="icons/chamfr.png" class="object-contain w-96 h-96">
         </div>
-
-        <div class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
-          <h2 class="smallTitle text-2xl">E-commerce</h2>
-          <p class="smallDate">Septembre 2024</p>
-          <img src="icons/G4.png" class="smallImg h-40 w-40 object-contain" alt="">
-          <div class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center lg:gap-20 max-lg:gap-10">
-            <h2 class="text-4xl">E-commerce</h2>
-            <p class="text-2xl">Septembre 2024</p>
-            <p class="lg:w-96 max-lg:w-5/6">
-              Ce projet nous a été donné avec pour objectif principal de monter en compétence dans l’utilisation du CMS WordPress. Ainsi, nous devions créer, à l’aide de WordPress, une boutique en ligne pour un e-commerce fictif de notre choix en assurant sa stabilité, sa sécurité et son référencement. Nous avons dû utiliser divers plugins tels que WooCommerce ou Yoast SEO et choisir un thème adapté à notre besoin.
-            </p>
-            <img src="icons/G4.png" class="lg:h-60 lg:w-60 w-32 h-32 object-contain">
-          </div>
-        </div>
-
-        <div class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
-          <h2 class="smallTitle text-2xl">E-commerce</h2>
-          <p class="smallDate">Septembre 2024</p>
-          <img src="icons/G4.png" class="smallImg h-40 w-40 object-contain" alt="">
-          <div class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center lg:gap-20 max-lg:gap-10">
-            <h2 class="text-4xl">E-commerce</h2>
-            <p class="text-2xl">Septembre 2024</p>
-            <p class="lg:w-96 max-lg:w-5/6">
-              Ce projet nous a été donné avec pour objectif principal de monter en compétence dans l’utilisation du CMS WordPress. Ainsi, nous devions créer, à l’aide de WordPress, une boutique en ligne pour un e-commerce fictif de notre choix en assurant sa stabilité, sa sécurité et son référencement. Nous avons dû utiliser divers plugins tels que WooCommerce ou Yoast SEO et choisir un thème adapté à notre besoin.
-            </p>
-            <img src="icons/G4.png" class="lg:h-60 lg:w-60 w-32 h-32 object-contain">
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
+    <!-- Fin exp 1 -->
+
+    <!-- Début exp 2 -->
+    <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
+      <div
+        class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-col gap-8">
+            <p class="text-5xl font-bold">Stagiaire Technicien Réseau</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
+              <p>27.11.2023 - 23.12.2023</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/company-light.svg" class="h-5 dark:hidden">
+              <p>Koesio</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/location-light.svg" class="h-5 dark:hidden">
+              <p>Echirolles</p>
+            </div>
+            <p class="w-2/3">Interventions diverses sur l'infrastructure des clients.</p>
+          </div>
+          <div class="flex gap-3">
+            <img src="./icons/network-dark.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
+            <img src="./icons/network-light.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
+          </div>
+        </div>
+        <div class="flex items-center justify-items-center self-center">
+          <img src="icons/koesio-logo.jpg" class="object-contain w-96 h-96">
+        </div>
+      </div>
+    </div>
+    <!-- Fin exp 2 -->
+
+    <!-- Début exp 3 -->
+    <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
+      <div
+        class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-col gap-8">
+            <p class="text-5xl font-bold">Stagiaire Technicien Réseau</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
+              <p>12.06.2023 - 08.07.2023</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/company-light.svg" class="h-5 dark:hidden">
+              <p>Nicomatic</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/location-light.svg" class="h-5 dark:hidden">
+              <p>Bons en Chablais</p>
+            </div>
+            <p class="w-2/3">Intervention sur l'infrastructure de l'entreprise, réponse au ticket d'aide et création
+              d'un plan réseau de l'entreprise .</p>
+          </div>
+          <div class="flex gap-3">
+            <img src="./icons/network-dark.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
+            <img src="./icons/network-light.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
+          </div>
+        </div>
+        <div class="flex items-center justify-items-center">
+          <img src="icons/nicomatic-logo.png" class="object-contain w-96 h-96">
+        </div>
+      </div>
+    </div>
+    <!-- Fin exp 3 -->
+
+    <!-- Début exp 4 -->
+    <div id="c1" class="content h-dvh w-dvw shrink-0 flex justify-center items-center">
+      <div
+        class="w-2/3 h-1/2 flex p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-col gap-8">
+            <p class="text-5xl font-bold">Stagiaire Technicien Réseau</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
+              <p>09.01.2023 - 04.02.2023</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/company-light.svg" class="h-5 dark:hidden">
+              <p>Nicomatic</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/location-light.svg" class="h-5 dark:hidden">
+              <p>Bons en Chablais</p>
+            </div>
+            <p class="w-2/3">Intervention sur l'infrastructure de l'entreprise et réponse au ticket d'aide .</p>
+          </div>
+          <div class="flex gap-3">
+            <img src="./icons/network-dark.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
+            <img src="./icons/network-light.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
+          </div>
+        </div>
+        <div class="flex items-center justify-items-center">
+          <img src="icons/nicomatic-logo.png" class="object-contain w-96 h-96">
+        </div>
+      </div>
+    </div>
+    <!-- Fin exp 4 -->
+  </section>
+
+  <!-- Fin exp desktop -->
 
 
-    <script>
-      const tham = document.querySelector(".tham");
-        
-      tham.addEventListener('click', () => {
-        tham.classList.toggle('tham-active');
-      });
-      </script>
-    <script src="scripts/switch.js"></script>
-  </body>
-  <script type="module" src="scripts/animScroll.js"></script>
-  <script type="module" src="scripts/animGrid.js"></script>
-  <script src="scripts/activeNav.js"></script>
-  <script type="module" src="scripts/toggleMenu.js"></script>
-  <script type="module" src="scripts/accueil.js"></script>
-  <script type="module" src="scripts/animProject.js"></script>
+  <!-- Début exp mobile -->
+
+  <section id="exp" class="lg:hidden flex flex-col justify-center items-center gap-10 pt-20">
+    <h2 class="text-3xl font-Michroma">Expérience</h2>
+    <!-- Début exp 1 -->
+    <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
+      <div
+        class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-8">
+            <p class="text-3xl font-bold">Stagiaire Développeur</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
+              <p>18.03.2024 - 13.04.2024</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/company-light.svg" class="h-5 dark:hidden">
+              <p>Cham.fr</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/location-light.svg" class="h-5 dark:hidden">
+              <p>Chamonix</p>
+            </div>
+            <p class="">Développement d'un portail captif avec CakePHP communicant avec un controlleur Ubiquity .</p>
+          </div>
+          <div class="flex gap-3 flex-wrap justify-center items-center">
+            <img src="./icons/cakephp.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
+            <img src="./icons/Php_light.svg" class="h-8 w-8 object-fit dark:hidden hover:scale-125 transition-all">
+            <img src="./icons/Php_dark.svg" class="h-8 w-8 object-fit hidden dark:block hover:scale-125 transition-all">
+            <img src="./icons/html.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
+            <img src="./icons/css.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
+            <img src="./icons/js.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
+            <img src="./icons/mariadb.svg" class="h-8 w-8 object-fit hover:scale-125 transition-all">
+            <img src="./icons/server-light.svg" class="h-8 w-8 object-fit dark:hidden hover:scale-125 transition-all">
+            <img src="./icons/server-dark.svg"
+              class="h-8 w-8 object-fit hidden dark:block hover:scale-125 transition-all">
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="icons/chamfr.png" class="object-contain h-20 w-20">
+        </div>
+      </div>
+    </div>
+    <!-- Fin exp 1 -->
+
+    <!-- Début exp 2 -->
+    <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
+      <div
+        class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-8">
+            <p class="text-3xl font-bold">Stagiaire Technicien Réseau</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
+              <p>27.11.2023 - 23.12.2023</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/company-light.svg" class="h-5 dark:hidden">
+              <p>Koesio</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/location-light.svg" class="h-5 dark:hidden">
+              <p>Echirolles</p>
+            </div>
+            <p class="">Interventions diverses sur l'infrastructure des clients.</p>
+          </div>
+          <div class="flex gap-3 flex-wrap justify-center items-center">
+            <img src="./icons/network-dark.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
+            <img src="./icons/network-light.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="icons/koesio-logo.jpg" class="object-contain w-20 h-20">
+        </div>
+      </div>
+    </div>
+    <!-- Fin exp 2 -->
+
+    <!-- Début exp 3 -->
+    <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
+      <div
+        class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-8">
+            <p class="text-3xl font-bold">Stagiaire Technicien Réseau</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
+              <p>12.06.2023 - 08.07.2023</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/company-light.svg" class="h-5 dark:hidden">
+              <p>Nicomatic</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/location-light.svg" class="h-5 dark:hidden">
+              <p>Bons en Chablais</p>
+            </div>
+            <p class="">Intervention sur l'infrastructure de l'entreprise, réponse au ticket d'aide et création d'un
+              plan réseau de l'entreprise .</p>
+          </div>
+          <div class="flex gap-3 flex-wrap justify-center items-center">
+            <img src="./icons/network-dark.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
+            <img src="./icons/network-light.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="icons/nicomatic-logo.png" class="object-contain w-20 h-20">
+        </div>
+      </div>
+    </div>
+    <!-- Fin exp 3 -->
+
+    <!-- Début exp 4 -->
+    <div id="c1" class="content h-fit w-dvw shrink-0 flex justify-center items-center">
+      <div
+        class="w-2/3 h-fit flex flex-col p-5 rounded-lg bg-opacity-50 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-col gap-8">
+            <p class="text-3xl font-bold">Stagiaire Technicien Réseau</p>
+            <div class="flex items-center gap-2">
+              <img src="icons/calendar-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/calendar-light.svg" class="h-5 dark:hidden">
+              <p>09.01.2023 - 04.02.2023</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/company-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/company-light.svg" class="h-5 dark:hidden">
+              <p>Nicomatic</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="icons/location-dark.svg" class="h-5 hidden dark:block">
+              <img src="icons/location-light.svg" class="h-5 dark:hidden">
+              <p>Bons en Chablais</p>
+            </div>
+            <p class="">Intervention sur l'infrastructure de l'entreprise et réponse au ticket d'aide .</p>
+          </div>
+          <div class="flex gap-3 flex-wrap justify-center items-center">
+            <img src="./icons/network-dark.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all hidden dark:block">
+            <img src="./icons/network-light.svg"
+              class="h-16 w-16 object-fit hover:scale-125 transition-all dark:hidden">
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="icons/nicomatic-logo.png" class="object-contain h-20 w-20">
+        </div>
+      </div>
+    </div>
+    <!-- Fin exp 4 -->
+
+  </section>
+
+  <!-- Fin section Expériences mobile -->
+
+  <section id="projets" class="w-dvw h-dvh min-h-fit flex flex-col items-center justify-start mt-20">
+    <h2 class="text-3xl font-Michroma translate-y-40">Projets</h2>
+    <div
+      class="w-full lg:h-full h-project grid max-lg:grid-rows-4 md:grid-cols-2 lg:grid-cols-4 justify-items-center items-center">
+
+      <div
+        class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
+        <h2 class="smallTitle text-2xl">Cercle de projet</h2>
+        <p class="smallDate">Novembre 2024</p>
+        <img src="img/logo.png" class="smallImg h-40 w-40 object-contain" alt="">
+        <div
+          class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center lg:gap-20 max-lg:gap-10">
+          <h2 class="text-4xl">Cercle de projet</h2>
+          <p class="text-2xl">Novembre 2024</p>
+          <p class="lg:w-96 max-lg:w-5/6">
+            L’objectif était de réaliser une application qui puisse donner envie de s’engager pour la planète de manière
+            ludique et immersive à l’aide d’une IA. Durant ce projet, nous avons eu l’occasion d’avoir des équipes
+            inter-promotionnel, ce qui nous a permis de monter rapidement en compétences notamment avec les différents
+            langages et frameworks tels que Symfony (PHP), TypeScript, TailwindCSS (CSS)
+          </p>
+          <img src="img/logo.png" class="lg:h-60 lg:w-60 w-32 h-32 object-contain">
+        </div>
+      </div>
+
+      <div
+        class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
+        <h2 class="smallTitle text-2xl">Portfolio collectif</h2>
+        <p class="smallDate">Octobre-Novembre 2024</p>
+        <img src="img/Photo Classe 4032x3024.avif" class="smallImg h-40 w-40 object-contain" alt="">
+        <div
+          class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center lg:gap-20 max-lg:gap-10">
+          <h2 class="text-4xl">Portfolio collectif</h2>
+          <p class="text-2xl">Octobre-Novembre 2024</p>
+          <p class="lg:w-96 max-lg:w-5/6">
+            Ce projet visait à nous faire travailler nos compétences en développement frontend dans un contexte réaliste
+            et motivant. L’objectif était à la fois de nous mettre en valeur individuellement à travers nos portfolios
+            personnels. Mais également de promouvoir les compétences et les forces de notre promotion via notre
+            portfolio commun de promotion.
+          </p>
+          <img src="img/Photo Classe 4032x3024.avif" class="lg:h-60 lg:w-60 w-32 h-32 object-contain">
+        </div>
+      </div>
+
+      <div
+        class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
+        <h2 class="smallTitle text-2xl">E-commerce</h2>
+        <p class="smallDate">Septembre 2024</p>
+        <img src="icons/G4.png" class="smallImg h-40 w-40 object-contain" alt="">
+        <div
+          class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center lg:gap-20 max-lg:gap-10">
+          <h2 class="text-4xl">E-commerce</h2>
+          <p class="text-2xl">Septembre 2024</p>
+          <p class="lg:w-96 max-lg:w-5/6">
+            Ce projet nous a été donné avec pour objectif principal de monter en compétence dans l’utilisation du CMS
+            WordPress. Ainsi, nous devions créer, à l’aide de WordPress, une boutique en ligne pour un e-commerce fictif
+            de notre choix en assurant sa stabilité, sa sécurité et son référencement. Nous avons dû utiliser divers
+            plugins tels que WooCommerce ou Yoast SEO et choisir un thème adapté à notre besoin.
+          </p>
+          <img src="icons/G4.png" class="lg:h-60 lg:w-60 w-32 h-32 object-contain">
+        </div>
+      </div>
+
+      <div
+        class="projectCard project-small bg-opacity-50 backdrop-blur-sm border border-white/20 shadow-lg flex flex-col items-center p-5 gap-5 cursor-pointer">
+        <h2 class="smallTitle text-2xl">E-commerce</h2>
+        <p class="smallDate">Septembre 2024</p>
+        <img src="icons/G4.png" class="smallImg h-40 w-40 object-contain" alt="">
+        <div
+          class="contentLarge w-full h-full opacity-0 scale-0 fixed flex flex-col justify-center items-center text-center lg:gap-20 max-lg:gap-10">
+          <h2 class="text-4xl">E-commerce</h2>
+          <p class="text-2xl">Septembre 2024</p>
+          <p class="lg:w-96 max-lg:w-5/6">
+            Ce projet nous a été donné avec pour objectif principal de monter en compétence dans l’utilisation du CMS
+            WordPress. Ainsi, nous devions créer, à l’aide de WordPress, une boutique en ligne pour un e-commerce fictif
+            de notre choix en assurant sa stabilité, sa sécurité et son référencement. Nous avons dû utiliser divers
+            plugins tels que WooCommerce ou Yoast SEO et choisir un thème adapté à notre besoin.
+          </p>
+          <img src="icons/G4.png" class="lg:h-60 lg:w-60 w-32 h-32 object-contain">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script>
+    const tham = document.querySelector(".tham");
+
+    tham.addEventListener('click', () => {
+      tham.classList.toggle('tham-active');
+    });
+  </script>
+
+  <script src="js/lib/gsap.js"></script>
+  <script src="js/lib/gsap-scroll.js"></script>
+  <script src="js/lib/gsap-flip.js"></script>
+  <script src="js/switch.js"></script>
+  <script type="module" src="js/animScroll.js"></script>
+  <script type="module" src="js/animGrid.js"></script>
+  <script src="js/activeNav.js"></script>
+  <script type="module" src="js/toggleMenu.js"></script>
+  <script type="module" src="js/accueil.js"></script>
+  <script type="module" src="js/animProject.js"></script>
+
+</body>
+
 </html>

@@ -1,0 +1,37 @@
+name: Deploy via SFTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'latest'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          username: ${{ secrets.SFTP_USERNAME }}
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: './'
+          remote_path: '/var/www/portfolio/'
+          sftp_only: 'true'
+          delete_remote_files: 'true'
+          rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log --exclude=.github --exclude=.gitignore --exclude=README.md --exclude=LICENSE --exclude=*.zip --exclude=*.tar.gz --exclude=*.gz --exclude=*.bz2 --exclude=*.xz --exclude=*.7z --exclude=*.rar --exclude=*.tar.xz --exclude=*.tar.bz2 --exclude=*.tar.gz --exclude=*.tar.lzma --exclude=*.tar.zst --exclude=package.json --exclude=package-lock.json --exclude=tailwind.config.js'
