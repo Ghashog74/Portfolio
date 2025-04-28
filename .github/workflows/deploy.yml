@@ -33,5 +33,4 @@ jobs:
           local_path: './'
           remote_path: '/var/www/portfolio/'
           sftp_only: 'true'
-          delete_remote_files: 'true'
           rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log --exclude=.github --exclude=.gitignore --exclude=README.md --exclude=LICENSE --exclude=*.zip --exclude=*.tar.gz --exclude=*.gz --exclude=*.bz2 --exclude=*.xz --exclude=*.7z --exclude=*.rar --exclude=*.tar.xz --exclude=*.tar.bz2 --exclude=*.tar.gz --exclude=*.tar.lzma --exclude=*.tar.zst --exclude=package.json --exclude=package-lock.json --exclude=tailwind.config.js'
