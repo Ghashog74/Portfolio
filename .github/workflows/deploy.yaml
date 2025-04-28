@@ -1,7 +1,7 @@
 ame: Deploy via SFTP
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
